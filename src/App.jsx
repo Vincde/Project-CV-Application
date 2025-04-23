@@ -10,8 +10,4 @@ function App() {
   )
 }
 
-function Hello() {
-  console.log('ciao');
-}
-
 export default App
