@@ -12,7 +12,6 @@ function App() {
     <div>
       <GeneralInfo info={generalInfo} setInfo={setGeneralInfo}></GeneralInfo>
     </div>
-    <p>{generalInfo.name}</p>
     </>
   )
 }

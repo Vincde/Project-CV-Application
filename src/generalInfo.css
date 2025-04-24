@@ -1,0 +1,11 @@
+.generalInfo{
+    display: flex;
+    gap: 50px;
+    
+}
+
+.generalInfo > div {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}

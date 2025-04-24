@@ -1,3 +1,4 @@
+import './generalInfo.css'
 
 function GeneralInfo({info, setInfo}) {
 
@@ -14,7 +15,8 @@ function GeneralInfo({info, setInfo}) {
     }
 
     return(
-        <div>
+        <div className='generalInfo'>
+            <h2>General Information:</h2>
             <div>
                 <p>Name:</p>
                 <input type="text" onChange={(e) => handleChange('name', e)} />
