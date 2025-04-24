@@ -5,13 +5,14 @@ import { useState } from 'react'
 
 function App() {
 
-  const [generalInfo, setGeneralInfo] = useState({name:'',email:'',address:''});
+  const [generalInfo, setGeneralInfo] = useState({name:'',email:'',phone:''});
 
   return(
     <>
     <div>
-      <GeneralInfo></GeneralInfo>
+      <GeneralInfo info={generalInfo} setInfo={setGeneralInfo}></GeneralInfo>
     </div>
+    <p>{generalInfo.name}</p>
     </>
   )
 }
