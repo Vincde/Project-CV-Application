@@ -1,3 +1,5 @@
+import './practical.css';
+
 function Practical({practice, setPractice}) {
 
     function handleChange(type, e) {
@@ -20,7 +22,7 @@ function Practical({practice, setPractice}) {
 
 
     return(
-        <div>
+        <div className='practical'>
             <h2>Practical Experiences: </h2>
             <div>
                 <p>Company Name: </p>

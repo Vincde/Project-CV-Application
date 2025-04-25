@@ -1,0 +1,11 @@
+.practical{
+    display: flex;
+    gap: 50px;
+    
+}
+
+.practical > div {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
