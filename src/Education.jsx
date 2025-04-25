@@ -1,6 +1,7 @@
 import './education.css';
 
 function EducationalExperience(education, setEducation) {
+
     function handleInputChange(type, e){
         let newEducation = {};
 
@@ -12,9 +13,8 @@ function EducationalExperience(education, setEducation) {
             newEducation = {...education, dateStudy: e.target.value};
         }
 
-        setEducation(newEducation);
+        setEducation({...newEducation});
     }
-
 
     return(
         <div className='educationalExperience'>
@@ -31,7 +31,11 @@ function EducationalExperience(education, setEducation) {
                 <p>Date of study</p>
                 <input type="date" onChange={(e) => handleInputChange('a', e)}/>
             </div>
+
+            <div>{education.titleStudy} {education.schoolName} {education.dateStudy}</div>
         </div>
+
+        
     );
 
 }
