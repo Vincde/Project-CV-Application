@@ -1,0 +1,11 @@
+.educationalExperience{
+    display: flex;
+    gap: 50px;
+    
+}
+
+.educationalExperience > div {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}

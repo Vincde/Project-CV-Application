@@ -17,8 +17,8 @@ function EducationalExperience(education, setEducation) {
 
 
     return(
-        <div>
-            <h2>Educational Experience</h2>
+        <div className='educationalExperience'>
+            <h2>Educational Experience: </h2>
             <div>
                 <p>School name: </p>
                 <input type="text" onChange={(e) => handleInputChange('schoolName', e)}/>

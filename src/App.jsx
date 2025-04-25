@@ -15,7 +15,7 @@ function App() {
       <EducationalExperience education={education} setEducation={setEducation}></EducationalExperience>
     </div>
     </>
-  )
+  );
 }
 
 export default App
