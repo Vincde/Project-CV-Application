@@ -1,4 +1,4 @@
-function CreateCV({cv, setCV}) {
+function CreateCV({cv, setCV, generalInfo, education, practice}) {
 
     function handleCVCreation() {
         setCV(true);
@@ -7,14 +7,15 @@ function CreateCV({cv, setCV}) {
     return(
         <>
         <button onClick={handleCVCreation}>Create Your CV!</button>
-        {cv && <Ciao></Ciao>}
+        {cv && <CV cv={cv} generalInfo={generalInfo} education={education} practice={practice}></CV>}
         </>
     )
 }
 
-function Ciao() {
+function CV({cv, generalInfo, education, practice}) {
+    const ciao = cv;
     return(
-        <div>ciao</div>
+        <div>{ciao}{generalInfo.name}{education.schoolName}{practice.companyName}</div>
     )
 }
 

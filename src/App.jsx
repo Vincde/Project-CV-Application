@@ -22,7 +22,13 @@ function App() {
       <EducationalExperience education={education} setEducation={setEducation}></EducationalExperience>
       <Practical practice={practice} setPractice={setPractice}></Practical>
     </div>
-    <CreateCV cv={cv} setCV={setCV}></CreateCV>
+    <CreateCV
+     cv={cv}
+     setCV={setCV}
+     generalInfo={generalInfo}
+     education={education}
+     practice={practice}>
+     </CreateCV>
     </>
   );
 }
