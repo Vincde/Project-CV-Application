@@ -14,6 +14,7 @@ function GeneralInfo({info, setInfo}) {
         setInfo({...newGenInfo});
     }
 
+
     return(
         <div className='generalInfo'>
             <h2>General Information:</h2>
@@ -29,6 +30,7 @@ function GeneralInfo({info, setInfo}) {
                 <p>Phone number:</p>
                 <input type="number" onChange={(e) => handleChange('phone', e)} />
             </div>
+            <button>Edit</button>
         </div>
         );
 }
