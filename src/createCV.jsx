@@ -14,7 +14,7 @@ function CreateCV({cv, setCV, generalInfo, education, practice}) {
         <button onClick={handleCVCreation}>Create Your CV!</button>
         {cv && <CV cv={alternativeInput.cv} generalInfo={alternativeInput.generalInfo} education={alternativeInput.education} practice={alternativeInput.practice}></CV>}
         </>
-    )
+    );
 }
 
 function CV({cv, generalInfo, education, practice}) {
