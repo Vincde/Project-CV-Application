@@ -21,15 +21,15 @@ function EducationalExperience({education, setEducation}) {
             <h2>Educational Experience: </h2>
             <div>
                 <p>School name: </p>
-                <input type="text" onChange={(e) => handleInputChange('schoolName', e)}/>
+                <input type="text" onChange={(e) => handleInputChange('schoolName', e)} value={education.schoolName}/>
             </div>
             <div>
                 <p>Title of Study: </p>
-                <input type="text" onChange={(e) => handleInputChange('titleStudy', e)}/>
+                <input type="text" onChange={(e) => handleInputChange('titleStudy', e)} value={education.titleStudy}/>
             </div>
             <div>
                 <p>Date of study</p>
-                <input type="date" onChange={(e) => handleInputChange('a', e)}/>
+                <input type="date" onChange={(e) => handleInputChange('a', e)} value={education.dateStudy}/>
             </div>
         </div>
     );
