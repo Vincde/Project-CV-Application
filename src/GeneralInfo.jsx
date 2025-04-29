@@ -14,20 +14,21 @@ function GeneralInfo({info, setInfo}) {
         setInfo({...newGenInfo});
     }
 
+
     return(
         <div className='generalInfo'>
             <h2>General Information:</h2>
             <div>
                 <p>Name:</p>
-                <input type="text" onChange={(e) => handleChange('name', e)} />
+                <input type="text" onChange={(e) => handleChange('name', e)} value={info.name} />
             </div>
             <div>
                 <p>Email:</p>
-                <input type="text" onChange={(e) => handleChange('email', e)}/>
+                <input type="text" onChange={(e) => handleChange('email', e)}  value={info.email}/>
             </div>
             <div>
                 <p>Phone number:</p>
-                <input type="number" onChange={(e) => handleChange('phone', e)} />
+                <input type="number" onChange={(e) => handleChange('phone', e)}  value={info.phone}/>
             </div>
         </div>
         );

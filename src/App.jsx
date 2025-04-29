@@ -18,9 +18,9 @@ function App() {
     <>
     <div>
 
-      <GeneralInfo info={generalInfo} setInfo={setGeneralInfo}></GeneralInfo>
-      <EducationalExperience education={education} setEducation={setEducation}></EducationalExperience>
-      <Practical practice={practice} setPractice={setPractice}></Practical>
+      {!cv && <GeneralInfo info={generalInfo} setInfo={setGeneralInfo}></GeneralInfo> }
+      {!cv && <EducationalExperience education={education} setEducation={setEducation}></EducationalExperience> }
+      {!cv && <Practical practice={practice} setPractice={setPractice}></Practical> }
     </div>
     <CreateCV
      cv={cv}

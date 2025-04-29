@@ -26,25 +26,24 @@ function Practical({practice, setPractice}) {
             <h2>Practical Experiences: </h2>
             <div>
                 <p>Company Name: </p>
-                <input type="text" onChange={(e) => handleChange('compName', e)}/>
+                <input type="text" onChange={(e) => handleChange('compName', e)} value={practice.companyName}/>
             </div>
             <div>
                 <p>Position title: </p>
-                <input type="text" onChange={(e) => handleChange('posTitle', e)} />
+                <input type="text" onChange={(e) => handleChange('posTitle', e)} value={practice.positionTitle}/>
             </div>
             <div>
                 <p>Main responsibilities: </p>
-                <input type="text" onChange={(e) => handleChange('responsblt', e)} />
+                <input type="text" onChange={(e) => handleChange('responsblt', e)} value={practice.mainRespons}/>
             </div>
             <div>
                 <p>Worked from: </p>
-                <input type="date" onChange={(e) => handleChange('from', e)} />
+                <input type="date" onChange={(e) => handleChange('from', e)} value={practice.dateFrom}/>
             </div>
             <div>
                 <p>To:  </p>
-                <input type="date" onChange={(e) => handleChange('to', e)} />
+                <input type="date" onChange={(e) => handleChange('to', e)} value={practice.dateUntil}/>
             </div>
-
         </div>
         
     );
