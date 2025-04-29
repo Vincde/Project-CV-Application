@@ -30,7 +30,6 @@ function GeneralInfo({info, setInfo}) {
                 <p>Phone number:</p>
                 <input type="number" onChange={(e) => handleChange('phone', e)} />
             </div>
-            <button>Edit</button>
         </div>
         );
 }
