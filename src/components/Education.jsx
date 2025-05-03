@@ -1,4 +1,4 @@
-import './education.css';
+import '../styles/education.css';
 
 function EducationalExperience({education, setEducation}) {
 

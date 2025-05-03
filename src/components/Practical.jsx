@@ -1,4 +1,4 @@
-import './practical.css';
+import '../styles/practical.css';
 
 function Practical({practice, setPractice}) {
 

@@ -1,4 +1,4 @@
-import './generalInfo.css'
+import '../styles/generalInfo.css'
 
 function GeneralInfo({info, setInfo}) {
 

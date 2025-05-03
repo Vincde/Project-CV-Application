@@ -1,7 +1,7 @@
-import GeneralInfo from './GeneralInfo'
-import EducationalExperience from './Education';
-import Practical from './Practical';
-import CreateCV from './createCV';
+import GeneralInfo from './components/GeneralInfo'
+import EducationalExperience from './components/Education';
+import Practical from './components/Practical';
+import CreateCV from './components/createCV';
 import './App.css'
 import { useState } from 'react'
 
