@@ -12,7 +12,7 @@ function CreateCV({cv, setCV, generalInfo, education, practice}) {
     return(
         <>
         {cv && <CV cv={alternativeInput.cv} generalInfo={alternativeInput.generalInfo} education={alternativeInput.education} practice={alternativeInput.practice}></CV>}
-        {!cv && <button onClick={handleCVCreation}>Create Your CV!</button> }
+        {!cv && <button onClick={handleCVCreation} style={{marginTop:'50px'}}>Create Your CV!</button> }
         {cv && <button onClick={() => setCV(false)}>Edit</button>}
         </>
     );

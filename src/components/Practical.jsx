@@ -22,8 +22,9 @@ function Practical({practice, setPractice}) {
 
 
     return(
+    <>            
+    <h2>Practical Experiences: </h2>
         <div className='practical'>
-            <h2>Practical Experiences: </h2>
             <div>
                 <p>Company Name: </p>
                 <input type="text" onChange={(e) => handleChange('compName', e)} value={practice.companyName}/>
@@ -45,7 +46,7 @@ function Practical({practice, setPractice}) {
                 <input type="date" onChange={(e) => handleChange('to', e)} value={practice.dateUntil}/>
             </div>
         </div>
-        
+    </>        
     );
 
 }

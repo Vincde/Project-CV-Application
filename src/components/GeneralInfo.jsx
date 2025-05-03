@@ -16,8 +16,9 @@ function GeneralInfo({info, setInfo}) {
 
 
     return(
+        <>
+        <h2>General Information:</h2>
         <div className='generalInfo'>
-            <h2>General Information:</h2>
             <div>
                 <p>Name:</p>
                 <input type="text" onChange={(e) => handleChange('name', e)} value={info.name} />
@@ -31,6 +32,7 @@ function GeneralInfo({info, setInfo}) {
                 <input type="number" onChange={(e) => handleChange('phone', e)}  value={info.phone}/>
             </div>
         </div>
+        </>
         );
 }
 
