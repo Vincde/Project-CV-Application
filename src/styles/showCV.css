@@ -5,3 +5,12 @@
     height: 100%;
 }
 
+.editButton{
+    background-color: #DDA853;
+    
+}
+
+.title{
+    padding-bottom: 50px;
+    font-size: 32px;
+}
