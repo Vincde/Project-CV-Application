@@ -21,7 +21,7 @@ function CreateCV({cv, setCV, generalInfo, education, practice}) {
 
 function CV({generalInfo, education, practice}) {
     return(
-        <div className="showCV">
+        <div className='showCV'>
             Your CV:<br></br>
             GENERAL INFO:<br></br>
             <ul>
