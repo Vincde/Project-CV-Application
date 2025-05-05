@@ -12,14 +12,16 @@ function CreateCV({cv, setCV, generalInfo, education, practice}) {
 
     return(
         <>
-        {cv && <CV cv={alternativeInput.cv} generalInfo={alternativeInput.generalInfo} education={alternativeInput.education} practice={alternativeInput.practice}></CV>}
-        {!cv && <button onClick={handleCVCreation} style={{marginTop:'50px'}}>Create Your CV!</button> }
+        {cv && <CV cv={alternativeInput.cv} generalInfo={alternativeInput.generalInfo} education={alternativeInput.education} practice={alternativeInput.practice}>
         {cv && <button onClick={() => setCV(false)}>Edit</button>}
+        </CV>}
+        {!cv && <button onClick={handleCVCreation} style={{marginTop:'50px'}}>Create Your CV!</button> }
+        
         </>
     );
 }
 
-function CV({generalInfo, education, practice}) {
+function CV({generalInfo, education, practice, children}) {
     return(
         <div className='showCV'>
             Your CV:<br></br>
@@ -43,6 +45,7 @@ function CV({generalInfo, education, practice}) {
                 {practice.dateFrom && <li>{practice.dateFrom}</li>}<br></br>
                 {practice.dateUntil && <li>{practice.dateUntil}</li>}<br></br>
             </ul>
+            {children}
         </div>
     )
 }
