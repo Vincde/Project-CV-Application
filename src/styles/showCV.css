@@ -7,15 +7,31 @@
 
 }
 
-*{
-    border:2px solid red;
-    margin:5px;
-}
-
 .showCV__mainContainer{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 80%;
+    border:2px solid green;
+    margin-bottom: 50px;
+}
+
+.showCV__generalInfo{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.showCV__education{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+}
+
+.showCV__practice{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 .editButton{
@@ -26,4 +42,5 @@
 .title{
     padding-bottom: 50px;
     font-size: 32px;
+    padding-right: 500px;
 }
