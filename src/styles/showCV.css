@@ -2,13 +2,25 @@
     background-color: white;
     color:black;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    font-weight: bold;
+
 }
 
+*{
+    border:2px solid red;
+    margin:5px;
+}
+
+.showCV__mainContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
 
 .editButton{
     background-color: #DDA853;
-    
+    align-self: center;
 }
 
 .title{
