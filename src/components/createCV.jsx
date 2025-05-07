@@ -28,21 +28,21 @@ function CV({generalInfo, education, practice, children}) {
             <div className="showCV__mainContainer">  
                 
                 <ul className="showCV__generalInfo">
-                GENERAL INFO:<br></br>
+                <div>GENERAL INFO:</div><br></br>
                    {generalInfo.name && <li>{generalInfo.name}</li>}<br></br>
                     {generalInfo.email && <li>{generalInfo.email}</li>}<br></br>
                     {generalInfo.phone && <li>{generalInfo.email}</li>}<br></br>
                 </ul><br></br>
                 
                 <ul className="showCV__education">
-                EDUCATION INFO:<br></br>
+                <div>EDUCATION INFO:</div><br></br>
                     {education.schoolName && <li>{education.schoolName}</li>}<br></br>
                     {education.titleStudy && <li>{education.titleStudy}</li>}<br></br>
                     {education.dateStudy && <li>{education.dateStudy}</li>}<br></br>
                 </ul>
                 <br></br>
                 <ul className="showCV__practice">
-                PRACTICE INFO:<br></br>
+                <div>PRACTICE INFO:</div><br></br>
                     {practice.companyName && <li>{practice.companyName}</li>}<br></br>
                     {practice.positionTitle && <li>{practice.positionTitle}</li>}<br></br>
                     {practice.mainRespons && <li>{practice.mainRespons}</li>}<br></br>

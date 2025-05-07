@@ -1,3 +1,7 @@
+/* *{
+    border:2px solid red;
+}
+ */
 .showCV{
     background-color: white;
     color:black;
@@ -16,22 +20,48 @@
     margin-bottom: 50px;
 }
 
+.showCV__mainContainer ul{
+    list-style-type: none;
+}
+
+.showCV__mainContainer ul > li:first-of-type{
+    margin-top: 30px;
+}
+
+/* .showCV__mainContainer ul > li{
+    justify-self: start;
+} */
+
 .showCV__generalInfo{
     grid-row-start: 1;
     grid-row-end: 2;
+    border:5px solid green;
+    margin-bottom: 0;
 }
 
 .showCV__education{
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 2;
+    border:5px solid yellow;
+    margin-bottom: 0;
 }
 
 .showCV__practice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
     grid-column-end: 3;
+    border:5px solid grey;
+    margin-top: 0;
+}
+
+.showCV__practice div{
+    align-self: flex-start;
+    margin-top: 50px;
 }
 
 .editButton{
