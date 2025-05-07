@@ -1,7 +1,7 @@
-/* *{
+*{
     border:2px solid red;
 }
- */
+
 .showCV{
     background-color: #d3d3d3;
     color:black;
@@ -24,6 +24,7 @@
 
 .showCV__mainContainer ul{
     list-style-type: none;
+    padding:0;
 }
 
 .showCV__mainContainer ul > li:first-of-type{
@@ -39,6 +40,10 @@
     margin-top:0;
 }
 
+.showCV__generalInfo div,.showCV__education div{
+    padding-right: 250px;
+}
+
 .showCV__education{
     grid-row-start: 1;
     grid-row-end: 2;
@@ -50,9 +55,6 @@
 }
 
 .showCV__practice{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     grid-row-start: 2;
     grid-row-end: 3;
     grid-column-start: 1;
@@ -64,7 +66,6 @@
 
 .showCV__practice div{
     align-self: flex-start;
-    margin-top: 50px;
 }
 
 .editButton{
