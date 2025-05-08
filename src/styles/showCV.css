@@ -1,3 +1,7 @@
+li, div{
+    display: inline-block;
+}
+
 *{
     border:2px solid red;
 }
@@ -15,7 +19,7 @@
     background-color: #e9e9e9;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 50% 50%;
     grid-auto-rows: 0;
     width: 80%;
     border:5px solid #242424;
@@ -27,8 +31,9 @@
     padding:0;
 }
 
+
 .showCV__mainContainer ul > li:first-of-type{
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 
@@ -40,8 +45,9 @@
     margin-top:0;
 }
 
-.showCV__generalInfo div,.showCV__education div{
-    padding-right: 250px;
+.showCV__generalInfo div,.showCV__education div,.showCV__practice div{
+    padding-right: 200px;
+    margin: 10px 0 10px 0;
 }
 
 .showCV__education{
