@@ -2,10 +2,10 @@ li, div{
     display: inline-block;
 }
 
-*{
+/* *{
     border:2px solid red;
 }
-
+ */
 .showCV{
     background-color: #d3d3d3;
     color:black;
@@ -19,7 +19,7 @@ li, div{
     background-color: #e9e9e9;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 1fr 1fr;
     grid-auto-rows: 0;
     width: 80%;
     border:5px solid #242424;
@@ -29,6 +29,13 @@ li, div{
 .showCV__mainContainer ul{
     list-style-type: none;
     padding:0;
+}
+
+.showCV__mainContainer li{
+    border-image:linear-gradient(to right, darkblue, darkorchid);
+    border-width: 7px;
+    border-style: solid;
+    border-image-slice: 1;
 }
 
 
