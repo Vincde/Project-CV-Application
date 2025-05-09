@@ -24,27 +24,49 @@ function CreateCV({cv, setCV, generalInfo, education, practice}) {
 function CV({generalInfo, education, practice, children}) {
     return(
         <div className='showCV'>
-            <div className="title">Your CV:</div><br></br>
-            GENERAL INFO:<br></br>
-            <ul>
-               {generalInfo.name && <li>{generalInfo.name}</li>}<br></br>
-                {generalInfo.email && <li>{generalInfo.email}</li>}<br></br>
-                {generalInfo.phone && <li>{generalInfo.email}</li>}<br></br>
-            </ul><br></br>
-            EDUCATION INFO:<br></br>
-            <ul>
-                {education.schoolName && <li>{education.schoolName}</li>}<br></br>
-                {education.titleStudy && <li>{education.titleStudy}</li>}<br></br>
-                {education.dateStudy && <li>{education.dateStudy}</li>}<br></br>
-            </ul><br></br>
-            PRACTICE INFO:<br></br>
-            <ul>
-                {practice.companyName && <li>{practice.companyName}</li>}<br></br>
-                {practice.positionTitle && <li>{practice.positionTitle}</li>}<br></br>
-                {practice.mainRespons && <li>{practice.mainRespons}</li>}<br></br>
-                {practice.dateFrom && <li>{practice.dateFrom}</li>}<br></br>
-                {practice.dateUntil && <li>{practice.dateUntil}</li>}<br></br>
-            </ul>
+            <div className="showCV__generics">
+                <div className="showCV__generics__up">
+                    <img src="https://www.shutterstock.com/image-photo/young-smiling-woman-holding-her-600w-246822310.jpg" alt="image of person" />
+                    <h1>Contatti</h1>
+                    <p>{generalInfo.phone && generalInfo.phone}</p>
+                    <p>{generalInfo.email && generalInfo.email}</p>
+                    <p>www.reallygreatsite.com</p>
+                </div>
+
+                <div className="showCV__generics__down">
+                    <h1><b>Lingue</b></h1>
+                    <p><b>Italiano</b> madrelingua</p>
+                    <p><b>Inglese</b> C2</p>
+                    <p><b>Spagnolo</b> B2</p>
+                    <p><b>Francese</b> B1</p>
+
+                    <h1><b>Su di me</b></h1>
+
+                    <p>Creativa e professionale <br></br>
+                    Specializzata in visual design <br></br>
+                    Sono proattiva, imparo in fretta <br></br>
+                    nuove metodologie di lavoro e mi <br></br>
+                    piace tenermi aggiornata sui trend.
+                    </p>
+                </div>
+            
+            </div>
+
+
+            <div className="showCV__specifics">
+                <h1>{generalInfo.name}</h1>
+                <div>
+                <h2>Istruzione e Formazione</h2>
+                    {education.dateStudy}| {education.schoolName} <br></br>
+                    {education.titleStudy}
+                </div>
+                <div>
+                    <h2>Esperienza Professionale</h2>
+                    {practice.dateFrom}-{practice.dateUntil} | {practice.companyName} <br></br>
+                    {practice.positionTitle} <br></br>
+                    {practice.mainRespons}
+                </div>
+            </div>
             {children}
         </div>
     )
