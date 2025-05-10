@@ -45,6 +45,7 @@ function Practical({practice, setPractice}) {
                 <p>To:  </p>
                 <input type="date" onChange={(e) => handleChange('to', e)} value={practice.dateUntil}/>
             </div>
+            <button>New</button>
         </div>
     </>        
     );

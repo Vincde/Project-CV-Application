@@ -33,6 +33,9 @@ function EducationalExperience({education, setEducation}) {
                 <p>Date of study</p>
                 <input type="date" onChange={(e) => handleInputChange('a', e)} value={education.dateStudy}/>
             </div>
+            
+            <button>New</button>
+            
         </div>
         </>
     );
