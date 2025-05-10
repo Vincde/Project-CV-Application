@@ -3,18 +3,22 @@ import '../styles/education.css';
 function EducationalExperience({education, setEducation}) {
 
     function handleInputChange(type, element, index, e){
-
+        const correctIndex = education.indexOf(element);
 
         setEducation(prevItem => 
             prevItem.map(item => {
-                if(education.indexOf(element) === index) {
+                if(education.indexOf(item) === correctIndex) {
                     if(type === 'schoolName'){
                         return {...item, schoolName:e.target.value}
                     }else if(type === 'titleStudy'){
                         return {...item, titleStudy: e.target.value}
-                    }else{
+                    }else if(type === 'dateStudy'){
                         return {...item, dateStudy: e.target.value}
+                    }else{
+                        return {...item};
                     }
+                }else{
+                    return {...item};
                 } 
             })
         );
