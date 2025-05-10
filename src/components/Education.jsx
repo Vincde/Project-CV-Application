@@ -2,39 +2,49 @@ import '../styles/education.css';
 
 function EducationalExperience({education, setEducation}) {
 
-    function handleInputChange(type, e){
-        let newEducation = {};
+    function handleInputChange(type, element, index, e){
 
-        if(type === 'schoolName'){
-            newEducation = {...education, schoolName: e.target.value};
-        }else if(type === 'titleStudy'){
-            newEducation = {...education, titleStudy: e.target.value};
-        }else{
-            newEducation = {...education, dateStudy: e.target.value};
-        }
 
-        setEducation({...newEducation});
+        setEducation(prevItem => 
+            prevItem.map(item => {
+                if(education.indexOf(element) === index) {
+                    if(type === 'schoolName'){
+                        return {...item, schoolName:e.target.value}
+                    }else if(type === 'titleStudy'){
+                        return {...item, titleStudy: e.target.value}
+                    }else{
+                        return {...item, dateStudy: e.target.value}
+                    }
+                } 
+            })
+        );
     }
 
     return(
         <>
         <h2>Educational Experience: </h2>
         <div className='educationalExperience'>
+            {education.map((element, index) => {
+                return(
+            <>
+                <div>
+                    <p>School name: </p>
+                    <input type="text" onChange={(e) => handleInputChange('schoolName', element, index, e)} value={element.schoolName}/>
+                </div>
+                <div>
+                    <p>Title of Study: </p>
+                    <input type="text" onChange={(e) => handleInputChange('titleStudy', element, index,  e)} value={element.titleStudy}/>
+                </div>
+                <div>
+                    <p>Date of study</p>
+                    <input type="date" onChange={(e) => handleInputChange('a', element, index, e)} value={element.dateStudy}/>
+                </div>
+            </>
+            )
+            })}
             
-            <div>
-                <p>School name: </p>
-                <input type="text" onChange={(e) => handleInputChange('schoolName', e)} value={education.schoolName}/>
-            </div>
-            <div>
-                <p>Title of Study: </p>
-                <input type="text" onChange={(e) => handleInputChange('titleStudy', e)} value={education.titleStudy}/>
-            </div>
-            <div>
-                <p>Date of study</p>
-                <input type="date" onChange={(e) => handleInputChange('a', e)} value={education.dateStudy}/>
-            </div>
             
-            <button>New</button>
+            <button onClick={() => setEducation([...education, {schoolName: '', titleStudy: '', dateStudy: ''}])}>New</button>
             
         </div>
         </>
