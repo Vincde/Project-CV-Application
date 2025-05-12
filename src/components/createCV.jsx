@@ -1,5 +1,6 @@
 import { useState } from "react";
 import '../styles/showCV.css'
+import React from "react";
 
 function CreateCV({cv, setCV, generalInfo, education, practice}) {
 
@@ -36,20 +37,20 @@ function CV({generalInfo, education, practice, children}) {
             EDUCATION INFO:<br></br>
             {education.map((element) => {
                 return(
-            <>
+            <React.Fragment key={element.id}>
                 <ul>
                 {element.schoolName && <li>{element.schoolName}</li>}<br></br>
                 {element.titleStudy && <li>{element.titleStudy}</li>}<br></br>
                 {element.dateStudy && <li>{element.dateStudy}</li>}<br></br>
                 </ul><br></br>
-            </>  
+            </React.Fragment>  
             )})}
 
             
             PRACTICE INFO:<br></br>
             {practice.map((element) => {
                 return(
-                <>
+                <React.Fragment key={element.id}>
                 <ul>
                     {element.companyName && <li>{element.companyName}</li>}<br></br>
                     {element.positionTitle && <li>{element.positionTitle}</li>}<br></br>
@@ -57,7 +58,7 @@ function CV({generalInfo, education, practice, children}) {
                     {element.dateFrom && <li>{element.dateFrom}</li>}<br></br>
                     {element.dateUntil && <li>{element.dateUntil}</li>}<br></br>
                 </ul>        
-                </>
+                </React.Fragment>
                 )
             })}
             
