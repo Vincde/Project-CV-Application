@@ -1,4 +1,5 @@
 import '../styles/practical.css';
+import React from 'react';
 
 function Practical({practice, setPractice}) {
 
@@ -30,13 +31,19 @@ function Practical({practice, setPractice}) {
     }
 
 
+    function deleteItem(id) {
+        const newPractice = practice.filter((element) => element.id !== id);
+        setPractice([...newPractice]);
+    }
+
+
     return(
     <>            
     <h2>Practical Experiences: </h2>
         <div className='practical'>
             {practice.map((element) => {
                 return(
-                <>
+                <React.Fragment key={element.id}>
                 <div>
                 <p>Company Name: </p>
                 <input type="text" onChange={(e) => handleChange('compName', element, e)} value={element.companyName}/>
@@ -57,11 +64,14 @@ function Practical({practice, setPractice}) {
                 <p>To:  </p>
                 <input type="date" onChange={(e) => handleChange('to', element, e)} value={element.dateUntil}/>
             </div>
-                </>
+
+                <button onClick={() => deleteItem(element.id)}>Delete</button>
+
+                </React.Fragment>
                 )
             })}
             
-            <button onClick={() => setPractice([...practice, {companyName: '', positionTitle: '', mainRespons: '', dateFrom: '', dateUntil: ''}])}>New</button>
+            <button onClick={() => setPractice([...practice, {id:crypto.randomUUID(), companyName: '', positionTitle: '', mainRespons: '', dateFrom: '', dateUntil: ''}])}>New</button>
         </div>
     </>   
     );

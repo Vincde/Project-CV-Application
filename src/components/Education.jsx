@@ -1,4 +1,5 @@
 import '../styles/education.css';
+import React from 'react';
 
 function EducationalExperience({education, setEducation}) {
 
@@ -24,13 +25,19 @@ function EducationalExperience({education, setEducation}) {
         );
     }
 
+    function deleteItem(id) {
+        const newEducation = education.filter((element) => element.id !== id);
+        setEducation([...newEducation]);
+    }
+
+
     return(
         <>
         <h2>Educational Experience: </h2>
         <div className='educationalExperience'>
             {education.map((element, index) => {
                 return(
-            <>
+            <React.Fragment key={element.id}>
                 <div>
                     <p>School name: </p>
                     <input type="text" onChange={(e) => handleInputChange('schoolName', element, index, e)} value={element.schoolName}/>
@@ -43,12 +50,15 @@ function EducationalExperience({education, setEducation}) {
                     <p>Date of study</p>
                     <input type="date" onChange={(e) => handleInputChange('a', element, index, e)} value={element.dateStudy}/>
                 </div>
-            </>
+
+                <button onClick={() => deleteItem(element.id)}>Delete</button>
+
+            </React.Fragment>
             )
             })}
             
             
-            <button onClick={() => setEducation([...education, {schoolName: '', titleStudy: '', dateStudy: ''}])}>New</button>
+            <button onClick={() => setEducation([...education, {id:crypto.randomUUID(), schoolName: '', titleStudy: '', dateStudy: ''}])}>New</button>
             
         </div>
         </>
