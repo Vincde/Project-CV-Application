@@ -37,7 +37,7 @@ function EducationalExperience({education, setEducation}) {
         <div className='educationalExperience'>
             {education.map((element) => {
                 return(
-            <React.Fragment key={element.id}>
+            <div key={element.id} className='educationalExperience__singleContainer'>
                 <div>
                     <p>School name: </p>
                     <input type="text" onChange={(e) => handleInputChange('schoolName', element, e)} value={element.schoolName}/>
@@ -53,12 +53,12 @@ function EducationalExperience({education, setEducation}) {
 
                 <button onClick={() => deleteItem(element.id)}>Delete</button>
 
-            </React.Fragment>
+            </div>
             )
             })}
             
             
-            <button onClick={() => setEducation([...education, {id:crypto.randomUUID(), schoolName: '', titleStudy: '', dateStudy: ''}])}>New</button>
+            <button onClick={() => setEducation([...education, {id:crypto.randomUUID(), schoolName: '', titleStudy: '', dateStudy: ''}])} id='newButton'>New</button>
             
         </div>
         </>

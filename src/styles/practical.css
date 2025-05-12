@@ -1,5 +1,6 @@
 .practical{
     display: flex;
+    flex-direction: column;
     gap: 50px;
     align-items: center;
     justify-content:center;
@@ -7,4 +8,13 @@
 
 .practical button{
     margin-top: 50px;
+}
+
+#newButton{
+    margin-top: 0;
+}
+
+.practical__singleContainer{
+    display: flex;
+    gap:50px;
 }

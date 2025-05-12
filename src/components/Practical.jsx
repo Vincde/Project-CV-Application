@@ -43,8 +43,8 @@ function Practical({practice, setPractice}) {
         <div className='practical'>
             {practice.map((element) => {
                 return(
-                <React.Fragment key={element.id}>
-                <div>
+                <div key={element.id} className='practical__singleContainer'>
+            <div>
                 <p>Company Name: </p>
                 <input type="text" onChange={(e) => handleChange('compName', element, e)} value={element.companyName}/>
             </div>
@@ -67,11 +67,11 @@ function Practical({practice, setPractice}) {
 
                 <button onClick={() => deleteItem(element.id)}>Delete</button>
 
-                </React.Fragment>
+                </div>
                 )
             })}
             
-            <button onClick={() => setPractice([...practice, {id:crypto.randomUUID(), companyName: '', positionTitle: '', mainRespons: '', dateFrom: '', dateUntil: ''}])}>New</button>
+            <button onClick={() => setPractice([...practice, {id:crypto.randomUUID(), companyName: '', positionTitle: '', mainRespons: '', dateFrom: '', dateUntil: ''}])} id='newButton'>New</button>
         </div>
     </>   
     );

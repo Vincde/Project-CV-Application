@@ -1,5 +1,6 @@
 .educationalExperience{
     display: flex;
+    flex-direction: column;
     gap: 50px;
     align-items: center;
     justify-content: center;
@@ -9,3 +10,11 @@
     margin-top: 50px;
 }
 
+#newButton{
+    margin-top: 0;
+}
+
+.educationalExperience__singleContainer{
+    display: flex;
+    gap:50px;
+}
