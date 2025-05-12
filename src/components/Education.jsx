@@ -3,7 +3,7 @@ import React from 'react';
 
 function EducationalExperience({education, setEducation}) {
 
-    function handleInputChange(type, element, index, e){
+    function handleInputChange(type, element, e){
         const correctIndex = education.indexOf(element);
 
         setEducation(prevItem => 
@@ -35,20 +35,20 @@ function EducationalExperience({education, setEducation}) {
         <>
         <h2>Educational Experience: </h2>
         <div className='educationalExperience'>
-            {education.map((element, index) => {
+            {education.map((element) => {
                 return(
             <React.Fragment key={element.id}>
                 <div>
                     <p>School name: </p>
-                    <input type="text" onChange={(e) => handleInputChange('schoolName', element, index, e)} value={element.schoolName}/>
+                    <input type="text" onChange={(e) => handleInputChange('schoolName', element, e)} value={element.schoolName}/>
                 </div>
                 <div>
                     <p>Title of Study: </p>
-                    <input type="text" onChange={(e) => handleInputChange('titleStudy', element, index,  e)} value={element.titleStudy}/>
+                    <input type="text" onChange={(e) => handleInputChange('titleStudy', element,  e)} value={element.titleStudy}/>
                 </div>
                 <div>
                     <p>Date of study</p>
-                    <input type="date" onChange={(e) => handleInputChange('a', element, index, e)} value={element.dateStudy}/>
+                    <input type="date" onChange={(e) => handleInputChange('a', element, e)} value={element.dateStudy}/>
                 </div>
 
                 <button onClick={() => deleteItem(element.id)}>Delete</button>
