@@ -1,0 +1,20 @@
+.educationalExperience{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    margin-bottom: 100px;
+}
+
+.educationalExperience__singleContainer{
+    display: flex;
+    align-items: center;
+    gap:50px;
+}
+
+.educationalExperience button{
+    margin-top: 50px;
+}
