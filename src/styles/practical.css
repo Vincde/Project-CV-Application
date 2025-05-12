@@ -1,0 +1,18 @@
+.practical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.practical__singleContainer{
+    display: flex;
+    align-items: center;
+    gap: 50px; 
+}
+
+
+.practical button{
+    margin-top: 50px;
+}
