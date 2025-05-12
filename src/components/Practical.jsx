@@ -35,6 +35,7 @@ function Practical({practice, setPractice}) {
     <h2>Practical Experiences: </h2>
         <div className='practical'>
             {practice.map((element) => {
+                return(
                 <>
                 <div>
                 <p>Company Name: </p>
@@ -57,11 +58,12 @@ function Practical({practice, setPractice}) {
                 <input type="date" onChange={(e) => handleChange('to', element, e)} value={element.dateUntil}/>
             </div>
                 </>
+                )
             })}
             
-            <button onClick={() => setPractice([...practice], {companyName: '', positionTitle: '', mainRespons: '', dateFrom: '', dateUntil: ''})}>New</button>
+            <button onClick={() => setPractice([...practice, {companyName: '', positionTitle: '', mainRespons: '', dateFrom: '', dateUntil: ''}])}>New</button>
         </div>
-    </>        
+    </>   
     );
 
 }
