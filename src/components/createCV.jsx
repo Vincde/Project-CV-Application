@@ -43,7 +43,7 @@ function CV({generalInfo, education, practice, children}) {
                 {element.dateStudy && <li>{element.dateStudy}</li>}<br></br>
                 </ul><br></br>
             </>  
-            )})};
+            )})}
 
             
             PRACTICE INFO:<br></br>
