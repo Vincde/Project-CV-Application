@@ -29,6 +29,10 @@ function CV({generalInfo, education, practice, children}) {
 
         <div className="showCV__left">
             <div className="showCV__left__img"><img src={person} alt="owner of the cv" /></div>
+            <h1>Contatti</h1>
+            <div><b>{generalInfo.phone}</b></div>
+            <div><b>{generalInfo.email}</b></div>
+            <div><b>www.BeautifulWebsite.com</b></div>
         </div>
 
             <div className="title">Your CV:</div><br></br>
