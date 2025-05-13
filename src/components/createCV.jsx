@@ -1,5 +1,5 @@
 import { useState } from "react";
-import '../styles/showCV.css'
+import '../styles/createCV.css'
 import React from "react";
 
 function CreateCV({cv, setCV, generalInfo, education, practice}) {

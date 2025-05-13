@@ -48,7 +48,7 @@ function EducationalExperience({education, setEducation}) {
                 </div>
                 <div>
                     <p>Date of study</p>
-                    <input type="date" onChange={(e) => handleInputChange('a', element, e)} value={element.dateStudy}/>
+                    <input type="date" onChange={(e) => handleInputChange('dateStudy', element, e)} value={element.dateStudy}/>
                 </div>
 
                 <button onClick={() => deleteItem(element.id)}>Delete</button>
