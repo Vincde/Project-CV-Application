@@ -32,46 +32,39 @@ function CV({generalInfo, education, practice, children}) {
                 <div><b>{generalInfo.phone}</b></div>
                 <div><b>{generalInfo.email}</b></div>
                 <div><b>www.BeautifulWebsite.com</b></div>
-            </div>
+            </div>   
 
-            <div className="title">Your CV:</div><br></br>
-            GENERAL INFO:<br></br>
-            <ul>
-               {generalInfo.name && <li>{generalInfo.name}</li>}<br></br>
-                {generalInfo.email && <li>{generalInfo.email}</li>}<br></br>
-                {generalInfo.phone && <li>{generalInfo.email}</li>}<br></br>
-            </ul><br></br>
-            
-            
-            EDUCATION INFO:<br></br>
-            {education.map((element) => {
-                return(
-            <React.Fragment key={element.id}>
-                <ul>
-                {element.schoolName && <li>{element.schoolName}</li>}<br></br>
-                {element.titleStudy && <li>{element.titleStudy}</li>}<br></br>
-                {element.dateStudy && <li>{element.dateStudy}</li>}<br></br>
-                </ul><br></br>
-            </React.Fragment>  
-            )})}
 
-            
-            PRACTICE INFO:<br></br>
-            {practice.map((element) => {
-                return(
+            <div className="showCV__right">
+                EDUCATION INFO:<br></br>
+                {education.map((element) => {
+                    return(
                 <React.Fragment key={element.id}>
-                <ul>
-                    {element.companyName && <li>{element.companyName}</li>}<br></br>
-                    {element.positionTitle && <li>{element.positionTitle}</li>}<br></br>
-                    {element.mainRespons && <li>{element.mainRespons}</li>}<br></br>
-                    {element.dateFrom && <li>{element.dateFrom}</li>}<br></br>
-                    {element.dateUntil && <li>{element.dateUntil}</li>}<br></br>
-                </ul>        
+                    <ul>
+                    {element.schoolName && <li>{element.schoolName}</li>}<br></br>
+                    {element.titleStudy && <li>{element.titleStudy}</li>}<br></br>
+                    {element.dateStudy && <li>{element.dateStudy}</li>}<br></br>
+                    </ul><br></br>
                 </React.Fragment>
-                )
-            })}
-            
-            {children}
+                )})}
+                
+                PRACTICE INFO:<br></br>
+                {practice.map((element) => {
+                    return(
+                    <React.Fragment key={element.id}>
+                    <ul>
+                        {element.companyName && <li>{element.companyName}</li>}<br></br>
+                        {element.positionTitle && <li>{element.positionTitle}</li>}<br></br>
+                        {element.mainRespons && <li>{element.mainRespons}</li>}<br></br>
+                        {element.dateFrom && <li>{element.dateFrom}</li>}<br></br>
+                        {element.dateUntil && <li>{element.dateUntil}</li>}<br></br>
+                    </ul>
+                    </React.Fragment>
+                    )
+                })}
+                
+                {children}
+            </div>
         </div>
     )
 }
