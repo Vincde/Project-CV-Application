@@ -1,6 +1,5 @@
 import { useState } from "react";
 import '../styles/createCV.css';
-import person from '../../public/person.png';
 import React from "react";
 
 function CreateCV({cv, setCV, generalInfo, education, practice}) {
@@ -27,13 +26,13 @@ function CV({generalInfo, education, practice, children}) {
     return(
         <div className='showCV'>
 
-        <div className="showCV__left">
-            <div className="showCV__left__img"><img src={person} alt="owner of the cv" /></div>
-            <h1>Contatti</h1>
-            <div><b>{generalInfo.phone}</b></div>
-            <div><b>{generalInfo.email}</b></div>
-            <div><b>www.BeautifulWebsite.com</b></div>
-        </div>
+            <div className="showCV__left">
+                <div className="showCV__left__img"><img src={"../../public/person.png"} alt="owner of the cv" /></div>
+                <h1>Contatti</h1>
+                <div><b>{generalInfo.phone}</b></div>
+                <div><b>{generalInfo.email}</b></div>
+                <div><b>www.BeautifulWebsite.com</b></div>
+            </div>
 
             <div className="title">Your CV:</div><br></br>
             GENERAL INFO:<br></br>
