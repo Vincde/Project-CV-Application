@@ -58,7 +58,7 @@ function EducationalExperience({education, setEducation}) {
             })}
             
             
-            <button onClick={() => setEducation([...education, {id:crypto.randomUUID(), schoolName: '', titleStudy: '', dateStudy: ''}])} id='newButton'>New</button>
+            <button onClick={() => setEducation([...education, {id:crypto.randomUUID(), schoolName: '', titleStudy: '', dateStudy: ''}])} id='newButton'>New Form</button>
             
         </div>
         </>

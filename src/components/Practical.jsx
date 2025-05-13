@@ -71,7 +71,7 @@ function Practical({practice, setPractice}) {
                 )
             })}
             
-            <button onClick={() => setPractice([...practice, {id:crypto.randomUUID(), companyName: '', positionTitle: '', mainRespons: '', dateFrom: '', dateUntil: ''}])} id='newButton'>New</button>
+            <button onClick={() => setPractice([...practice, {id:crypto.randomUUID(), companyName: '', positionTitle: '', mainRespons: '', dateFrom: '', dateUntil: ''}])} id='newButton'>New Form</button>
         </div>
     </>   
     );
