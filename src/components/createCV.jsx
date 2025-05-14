@@ -29,7 +29,7 @@ function CV({generalInfo, education, practice, children}) {
             <div className="showCV__left">
                 <div className="showCV__left__img"><img src={"../../public/person.png"} alt="owner of the cv" /></div>
                 <h1>Contatti</h1>
-                <div className="showCV__left__phone"> <img src="./../../public/phone.svg" alt="" /> <b>{generalInfo.phone}</b></div>
+                <div className="showCV__left__phone"> <img src="./../../public/phone.svg" alt="" /> <b>+39 {generalInfo.phone}</b></div>
                 <div className="showCV__left__email"> <img src="./../../public/mail.svg" alt="" /> <b>{generalInfo.email}</b></div>
                 <div className="showCV__left__link"> <img src="./../../public/link.svg" alt="" /> <b>www.BeautifulWebsite.com</b></div>
             </div>   
