@@ -9,6 +9,7 @@
     min-height: 100vh;
     color: black;
     display: flex;
+    padding: 70px 0 70px 0;
 }
 
             /* SHOWCV LEFT */
@@ -18,6 +19,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.showCV__left__phone,
+.showCV__left__email,
+.showCV__left__link{
+    display: flex;
 }
 
 .showCV__left__img img{
@@ -37,10 +44,20 @@
 }
 
 
+            /* SHOWCV LEFT END */
+
+
             /* SHOWCV RIGHT */
 
 
 
 .showCV__right{
     width: 70%;
+}
+
+            /* SHOWCV RIGHT END */
+
+
+.showCV__separator{
+    border:1px solid black;
 }
