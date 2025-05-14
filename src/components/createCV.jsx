@@ -68,14 +68,13 @@ function CV({generalInfo, education, practice, children}) {
                     <div className="showCV__right__list">
                         <h3>
                         {element.dateFrom && element.dateFrom}
-                        {element.dateFrom && element.dateUntil ? 'to' : ''}   {/* not to leave - alone when elements are null */}
+                        {element.dateFrom && element.dateUntil ? ' to ' : ''}   {/* not to leave - alone when elements are null */}
                         {element.dateUntil && element.dateUntil}
-                        {element.companyName && element.dateUntil ? '|' : ''} {/* not leave alone */}
-                        {element.companyName && element.companyName}
+                        {element.companyName && (element.dateFrom || element.dateUntil) ? ' |' : ''} {element.companyName && element.companyName}
                         </h3>
                         <h4>
                             {element.positionTitle && element.positionTitle}
-                            {element.mainRespons && element.positionTitle ? '/' : ''} {/* not leave alone */}
+                            {element.mainRespons && element.positionTitle ? ' /' : ''} {/* not leave alone */}
                             {element.mainRespons && element.mainRespons}
                         </h4>
                         <br></br>

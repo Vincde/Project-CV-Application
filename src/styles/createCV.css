@@ -36,8 +36,8 @@
 .showCV__left__link{
     display: flex;
     gap:10px;
-    font-size: 12px;
-    margin-bottom: 10px;
+/*     font-size: 12px;
+ */    margin-bottom: 10px;
 }
 
 .showCV__left__phone,
@@ -45,6 +45,11 @@
 .showCV__left__link,
 .showCV__left h1{
     padding-left: var(--margin-left-side);
+    font-size:16px;
+}
+
+.showCV__left h1{
+    font-size: 24px;
 }
 
 
@@ -66,7 +71,7 @@
 }
 
 .showCV__left__img{
-    width: 40%;
+    width: 50%;
     aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 50%;
@@ -105,7 +110,7 @@
     font-size: 32px;
 }
 .showCV__right h3{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 100;
     margin:0;
 }
@@ -121,6 +126,7 @@
 
 .showCV__right__list{
     text-align: start;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
             /* SHOWCV RIGHT END */
