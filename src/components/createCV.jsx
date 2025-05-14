@@ -31,7 +31,7 @@ function CV({generalInfo, education, practice, children}) {
                 <h1>Contatti</h1>
                 <div className="showCV__left__phone"> <img src="./../../public/phone.svg" alt="" /> <b>+39 {generalInfo.phone}</b></div>
                 <div className="showCV__left__email"> <img src="./../../public/mail.svg" alt="" /> <b>{generalInfo.email}</b></div>
-                <div className="showCV__left__link"> <img src="./../../public/link.svg" alt="" /> <b>www.BeautifulWebsite.com</b></div>
+                <div className="showCV__left__link"> <img src="./../../public/link.svg" alt="" /> {generalInfo.email && <b>www.BeautifulWebsite.com</b>}</div>
             </div>   
 
             <div className="showCV__separator"></div>
@@ -47,7 +47,8 @@ function CV({generalInfo, education, practice, children}) {
                 <React.Fragment key={element.id}>
                     <div className="showCV__right__list">
                         <h3>
-                        {element.dateStudy && element.dateStudy} |
+                        {element.dateStudy && element.dateStudy}
+                        {element.dateStudy && element.schoolName ? '|' : ''}
                         {element.schoolName && element.schoolName}
                         </h3>
                         <h4>{element.titleStudy && element.titleStudy}</h4>
@@ -66,10 +67,17 @@ function CV({generalInfo, education, practice, children}) {
                     <React.Fragment key={element.id}>
                     <div className="showCV__right__list">
                         <h3>
-                        {element.dateFrom && element.dateFrom} - {element.dateUntil && element.dateUntil} 
-                        | {element.companyName && element.companyName}
+                        {element.dateFrom && element.dateFrom}
+                        {element.dateFrom && element.dateUntil ? 'to' : ''}   {/* not to leave - alone when elements are null */}
+                        {element.dateUntil && element.dateUntil}
+                        {element.companyName && element.dateUntil ? '|' : ''} {/* not leave alone */}
+                        {element.companyName && element.companyName}
                         </h3>
-                        <h4>{element.positionTitle && element.positionTitle} / {element.mainRespons && element.mainRespons}</h4>
+                        <h4>
+                            {element.positionTitle && element.positionTitle}
+                            {element.mainRespons && element.positionTitle ? '/' : ''} {/* not leave alone */}
+                            {element.mainRespons && element.mainRespons}
+                        </h4>
                         <br></br>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem debitis officiis suscipit reprehenderit dolores quos doloribus at nisi culpa? Nulla nihil placeat adipisci, accusantium aliquid molestiae minima aspernatur architecto odit?</p>
                     </div>
