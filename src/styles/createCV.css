@@ -95,6 +95,30 @@
 
 .showCV__right{
     width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+.showCV__right h1{
+    font-size: 32px;
+}
+.showCV__right h3{
+    font-size: 15px;
+}
+.showCV__right h4{
+    margin:0;
+}
+
+.showCV__right__separator{
+    border:5px solid black;
+    width: 50px;
+    margin-bottom: 80px;
+}
+
+.showCV__right__education{
+    text-align: start;
 }
 
             /* SHOWCV RIGHT END */

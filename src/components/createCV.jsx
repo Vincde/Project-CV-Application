@@ -37,19 +37,30 @@ function CV({generalInfo, education, practice, children}) {
             <div className="showCV__separator"></div>
 
             <div className="showCV__right">
-                EDUCATION INFO:<br></br>
+                <h1>{generalInfo.name}</h1>
+
+                <div className="showCV__right__separator"></div>
+
+                <b>EDUCATION INFO:</b><br></br>
                 {education.map((element) => {
                     return(
                 <React.Fragment key={element.id}>
-                    <ul>
-                    {element.schoolName && <li>{element.schoolName}</li>}<br></br>
-                    {element.titleStudy && <li>{element.titleStudy}</li>}<br></br>
-                    {element.dateStudy && <li>{element.dateStudy}</li>}<br></br>
-                    </ul><br></br>
+                    <div className="showCV__right__education">
+                        <h3><b>
+                        {element.dateStudy && element.dateStudy} |
+                        {element.schoolName && element.schoolName}</b>
+                        </h3>
+                        <h4>{element.titleStudy && element.titleStudy}</h4>
+                        <br></br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem debitis officiis suscipit reprehenderit dolores quos doloribus at nisi culpa? Nulla nihil placeat adipisci, accusantium aliquid molestiae minima aspernatur architecto odit?</p>
+                    </div>
+                <br></br>
                 </React.Fragment>
                 )})}
                 
-                PRACTICE INFO:<br></br>
+                <br></br>
+                
+                <b>PRACTICE INFO:</b><br></br>
                 {practice.map((element) => {
                     return(
                     <React.Fragment key={element.id}>
