@@ -41,14 +41,14 @@ function CV({generalInfo, education, practice, children}) {
 
                 <div className="showCV__right__separator"></div>
 
-                <b>EDUCATION INFO:</b><br></br>
+                <h2><b>EDUCATION INFO:</b></h2><br></br>
                 {education.map((element) => {
                     return(
                 <React.Fragment key={element.id}>
-                    <div className="showCV__right__education">
-                        <h3><b>
+                    <div className="showCV__right__list">
+                        <h3>
                         {element.dateStudy && element.dateStudy} |
-                        {element.schoolName && element.schoolName}</b>
+                        {element.schoolName && element.schoolName}
                         </h3>
                         <h4>{element.titleStudy && element.titleStudy}</h4>
                         <br></br>
@@ -57,20 +57,23 @@ function CV({generalInfo, education, practice, children}) {
                 <br></br>
                 </React.Fragment>
                 )})}
-                
+
                 <br></br>
                 
-                <b>PRACTICE INFO:</b><br></br>
+                <h2><b>PRACTICE INFO:</b></h2><br></br>
                 {practice.map((element) => {
                     return(
                     <React.Fragment key={element.id}>
-                    <ul>
-                        {element.companyName && <li>{element.companyName}</li>}<br></br>
-                        {element.positionTitle && <li>{element.positionTitle}</li>}<br></br>
-                        {element.mainRespons && <li>{element.mainRespons}</li>}<br></br>
-                        {element.dateFrom && <li>{element.dateFrom}</li>}<br></br>
-                        {element.dateUntil && <li>{element.dateUntil}</li>}<br></br>
-                    </ul>
+                    <div className="showCV__right__list">
+                        <h3>
+                        {element.dateFrom && element.dateFrom} - {element.dateUntil && element.dateUntil} 
+                        | {element.companyName && element.companyName}
+                        </h3>
+                        <h4>{element.positionTitle && element.positionTitle} / {element.mainRespons && element.mainRespons}</h4>
+                        <br></br>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem debitis officiis suscipit reprehenderit dolores quos doloribus at nisi culpa? Nulla nihil placeat adipisci, accusantium aliquid molestiae minima aspernatur architecto odit?</p>
+                    </div>
+                <br></br>
                     </React.Fragment>
                     )
                 })}
