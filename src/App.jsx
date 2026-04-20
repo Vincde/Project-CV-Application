@@ -21,11 +21,6 @@ function App() {
   }, []);
 
 
-  /*
-    function handleChange(e, changingObject, setChangingObject) {
-    setChangingObject({...changingObject, [e.target.id]: e.target.value});
-  }
-    */
 
   return(
     <>
@@ -42,3 +37,63 @@ function App() {
 
 
 export default App;
+
+
+
+
+/* 
+  EXAMPLE OF OPTIMIZED FUNCTION
+
+  import { useState } from 'react';
+
+function App() {
+  const [generalInfo, setGeneralInfo] = useState({name : '', email: '', phone: ""});
+  const [educationInfo, setEducationInfo] = useState({schoolName: '', titleOfStudy: '', dateOfStudy: ''});
+  const [practicalExperience, setPracticalExperience] = useState({companyName: '', positionTitle: '', mainResponsibilities: [], dateOfStart: '', dateOfEnd: ''});
+
+  // A generic generator function. 
+  // It takes a setter, and returns a function tailored for that setter.
+  // Using `prev` means we don't need to pass the current state object!
+  const createChangeHandler = (setterFunc) => (e) => {
+    setterFunc(prev => ({ ...prev, [e.target.id]: e.target.value }));
+  };
+
+  return(
+    <>
+      <GeneralInfo 
+        data={generalInfo} 
+        onChange={createChangeHandler(setGeneralInfo)} 
+      />
+      <EducationalExperience 
+        data={educationInfo} 
+        onChange={createChangeHandler(setEducationInfo)} 
+      />
+      <PracticalExperience 
+        data={practicalExperience} 
+        onChange={createChangeHandler(setPracticalExperience)} 
+      />
+    </>
+  );
+}
+
+
+
+
+export default function GeneralInfo({ data, onChange }) {
+  return (
+    <div>
+      <input 
+        id="name" 
+        value={data.name} 
+        onChange={onChange} 
+      />
+      <input 
+        id="email" 
+        value={data.email} 
+        onChange={onChange} 
+      />
+    </div>
+  );
+}
+
+*/
