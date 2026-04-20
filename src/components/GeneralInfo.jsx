@@ -1,13 +1,13 @@
-export default function GeneralInformation({name, email, phone, handleChange}) {
+export default function GeneralInformation({generalInfo, setGeneralInfo, handleChange}) {
     return(
         <section>
             <form onSubmit={e => e.preventDefault()}>
                 <label htmlFor="name">Name: </label>
-                <input type="text" id="name" value={name} onChange={handleChange}/>
+                <input type="text" id="name" value={generalInfo.name} onChange={(e) => handleChange(e, generalInfo, setGeneralInfo)} />
                 <label htmlFor="email">Email: </label>
-                <input type="text" id="email" value={email} onChange={handleChange}/>
-                <label htmlFor="phoneNumber">Phone Number: </label>
-                <input type="number" id="phoneNumber" value={phone} onChange={handleChange}/>
+                <input type="text" id="email" value={generalInfo.email} onChange={(e) => handleChange(e, generalInfo, setGeneralInfo)}/>
+                <label htmlFor="phone">Phone Number: </label>
+                <input type="number" id="phone" value={generalInfo.phone} onChange={(e) => handleChange(e, generalInfo, setGeneralInfo)}/>
             </form>
         </section>
     );
