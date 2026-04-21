@@ -9,7 +9,7 @@ export default function PracticalExperience({practicalExperience, onChange}){
                 <input type="text" id="positionTitle" value={practicalExperience.positionTitle} onChange={onChange}/>
                 
                 <label htmlFor="mainResponsibilities">Main Responsibilities</label>
-                <input type="text" id="mainResponsibilities" value={practicalExperience.mainResponsibilities} onChange={onChange}/>
+                <textarea type="text" id="mainResponsibilities" value={practicalExperience.mainResponsibilities} onChange={onChange}></textarea>
                 
                 <label htmlFor="dateOfStart">Date of start: </label>
                 <input type="text" id="dateOfStart" value={practicalExperience.dateOfStart} onChange={onChange}/>

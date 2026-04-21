@@ -9,7 +9,7 @@ import { useState } from 'react';
 function App() {
   const [generalInfo, setGeneralInfo] = useState({name : '', email: '', phone: ""});
   const [educationInfo, setEducationInfo] = useState({schoolName: '', titleOfStudy: '', dateOfStudy: ''})
-  const [practicalExperience, setPracticalExperience] = useState({companyName: '', positionTitle: '', mainResponsibilities: [], dateOfStart: '', dateOfEnd: ''});
+  const [practicalExperience, setPracticalExperience] = useState({companyName: '', positionTitle: '', mainResponsibilities: '', dateOfStart: '', dateOfEnd: ''});
 
   const createChangeHandler = (setterFunc) => (e) => {
     setterFunc(prev => ({ ...prev, [e.target.id]: e.target.value }));
