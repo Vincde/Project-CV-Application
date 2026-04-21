@@ -4,6 +4,7 @@
    align-items: left;
 }
 
-section{
-    margin-top:0 auto;
+
+.main_container section{
+    margin: 0 0 10px 0px;
 }

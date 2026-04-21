@@ -20,6 +20,7 @@ function App() {
 
   return(
     <div className='main_container'>
+    <h1>Create Your CV!</h1>
     <GeneralInfo 
       generalInfo={generalInfo}
       onChange={createChangeHandler(setGeneralInfo)}
