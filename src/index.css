@@ -1,0 +1,16 @@
+@font-face {
+    font-family: handFont;
+    src: url(./fonts/LobsterTwo-Regular.ttf);
+}
+
+body{
+    background-color: #e5eee4;
+    font-family: handFont;
+    color: rgb(51, 49, 49);
+}
+
+
+#root{
+    display: flex;
+    justify-content: center;
+}

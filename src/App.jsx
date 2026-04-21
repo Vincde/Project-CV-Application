@@ -2,6 +2,7 @@ import GeneralInfo from './components/GeneralInfo';
 import EducationalExperience from './components/EducationalExperience';
 import PracticalExperience from './components/PracticalExperience';
 import { useState } from 'react';
+import './App.css';
 
 
 
@@ -18,7 +19,7 @@ function App() {
 
 
   return(
-    <>
+    <div className='main_container'>
     <GeneralInfo 
       generalInfo={generalInfo}
       onChange={createChangeHandler(setGeneralInfo)}
@@ -35,7 +36,7 @@ function App() {
       practicalExperience={practicalExperience}
       onChange={createChangeHandler(setPracticalExperience)} 
     ></PracticalExperience>
-    </>
+    </div>
   );
   
 }
