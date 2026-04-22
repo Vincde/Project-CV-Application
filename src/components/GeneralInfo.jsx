@@ -11,6 +11,10 @@ export default function GeneralInformation({generalInfo, onChange}) {
                 <br />
                 <label htmlFor="phone">Phone Number: </label>
                 <input type="number" id="phone" value={generalInfo.phone} onChange={onChange}/>
+                <div>
+                    <button>Edit</button>
+                    <button>Send</button>
+                </div>
             </form>
         </section>
     );

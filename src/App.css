@@ -17,3 +17,10 @@
     flex-direction: column;
 }
 
+
+input{
+    border:1px solid #c7adad;
+    border-radius: 5px;
+    outline: none;
+}
+

@@ -25,6 +25,13 @@ export default function PracticalExperience({practicalExperience, onChange}){
 
                 <label htmlFor="dateOfEnd">Date of End: </label>
                 <input type="date" id="dateOfEnd" value={practicalExperience.dateOfEnd} onChange={onChange}/>
+                
+                <br />
+
+                <div>
+                    <button>Edit</button>
+                    <button>Send</button>
+                </div>
             </form>
         </section>
     )
