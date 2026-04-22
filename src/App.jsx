@@ -19,25 +19,27 @@ function App() {
 
 
   return(
-    <div className='main_container'>
-    <h1>Create Your CV!</h1>
-    <GeneralInfo 
-      generalInfo={generalInfo}
-      onChange={createChangeHandler(setGeneralInfo)}
-    ></GeneralInfo>
+    <>
+      <h1>Create Your CV!</h1>
+      <div className='main_container'>
+        <GeneralInfo 
+          generalInfo={generalInfo}
+          onChange={createChangeHandler(setGeneralInfo)}
+        ></GeneralInfo>
     
     
-    <EducationalExperience
-      educationInfo={educationInfo}
-      onChange={createChangeHandler(setEducationInfo)}
-    ></EducationalExperience>
+        <EducationalExperience
+          educationInfo={educationInfo}
+          onChange={createChangeHandler(setEducationInfo)}
+        ></EducationalExperience>
 
 
-    <PracticalExperience 
-      practicalExperience={practicalExperience}
-      onChange={createChangeHandler(setPracticalExperience)} 
-    ></PracticalExperience>
-    </div>
+        <PracticalExperience 
+          practicalExperience={practicalExperience}
+          onChange={createChangeHandler(setPracticalExperience)} 
+        ></PracticalExperience>
+      </div>
+    </>
   );
   
 }

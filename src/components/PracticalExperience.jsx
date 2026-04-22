@@ -3,7 +3,7 @@ export default function PracticalExperience({practicalExperience, onChange}){
         <section>
             <h2>Practical Experience</h2>
             <form onSubmit={(e) => e.preventDefault()}>
-                <label htmlFor="companyName">Name of the Company</label>
+                <label htmlFor="companyName">Name of the Company: </label>
                 <input type="text" id="companyName" value={practicalExperience.companyName} onChange={onChange}/>
 
                 <br />
@@ -13,18 +13,18 @@ export default function PracticalExperience({practicalExperience, onChange}){
                 
                 <br />
 
-                <label htmlFor="mainResponsibilities">Main Responsibilities</label>
+                <label htmlFor="mainResponsibilities">Main Responsibilities: </label>
                 <textarea type="text" id="mainResponsibilities" value={practicalExperience.mainResponsibilities} onChange={onChange}></textarea>
                 
                 <br />
 
                 <label htmlFor="dateOfStart">Date of start: </label>
-                <input type="text" id="dateOfStart" value={practicalExperience.dateOfStart} onChange={onChange}/>
+                <input type="date" id="dateOfStart" value={practicalExperience.dateOfStart} onChange={onChange}/>
                 
                 <br />
 
-                <label htmlFor="dateOfEnd">Date of End</label>
-                <input type="text" id="dateOfEnd" value={practicalExperience.dateOfEnd} onChange={onChange}/>
+                <label htmlFor="dateOfEnd">Date of End: </label>
+                <input type="date" id="dateOfEnd" value={practicalExperience.dateOfEnd} onChange={onChange}/>
             </form>
         </section>
     )
