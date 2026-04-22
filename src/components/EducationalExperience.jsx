@@ -11,7 +11,8 @@ export default function EducationalExperience({educationInfo, onChange}){
                 <br />
                 <label htmlFor="dateOfStudy">Date you graduated in: </label>
                 <input type="text" id="dateOfStudy" value={educationInfo.dateOfStudy} onChange={onChange}/>
-                <div>
+                <br />
+                <div className="componentButtons">
                     <button>Edit</button>
                     <button>Send</button>
                 </div>

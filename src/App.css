@@ -24,3 +24,9 @@ input{
     outline: none;
 }
 
+
+.componentButtons{
+    display: flex;
+    gap: 10px;
+}
+

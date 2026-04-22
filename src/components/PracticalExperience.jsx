@@ -28,7 +28,7 @@ export default function PracticalExperience({practicalExperience, onChange}){
                 
                 <br />
 
-                <div>
+                <div className="componentButtons">
                     <button>Edit</button>
                     <button>Send</button>
                 </div>
