@@ -5,11 +5,6 @@
     src: url(./fonts/LobsterTwo-Regular.ttf);
 }
 
-*{
-    border:2px solid red;
-    margin:2px;
-}
-
 body{
     background-color: #e5eee4;
     font-family: handFont;

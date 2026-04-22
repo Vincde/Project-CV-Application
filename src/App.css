@@ -6,7 +6,10 @@
 
 
 .main_container section{
+    border:6px solid #aaddc8;
+    border-radius: 10px;
     margin: 0 0 10px 0px;
+    padding:5px;
 }
 
 .main_container form{
