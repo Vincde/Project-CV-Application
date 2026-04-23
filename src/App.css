@@ -32,6 +32,7 @@ input{
 
 .componentButtons button{
     width: 30%;
+    font-size:small;
 }
 
 button{
