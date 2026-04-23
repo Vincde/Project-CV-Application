@@ -30,3 +30,14 @@ input{
     gap: 10px;
 }
 
+.componentButtons button{
+    width: 30%;
+}
+
+button{
+    border-radius: 5px;
+    font-weight:550;
+    outline: none;
+    border: 1px solid #c7adad;
+    background-color: #afce8c8e;
+}
