@@ -20,8 +20,15 @@ function App() {
 
   return(
     <>
-      <h1>Create Your CV!</h1>
-      <div className='main_container'>
+      {generalInfo.formState === 'sent' &&
+      educationInfo.formState === 'sent' &&
+      practicalExperience.formState === 'sent' ? 
+      (
+        <h1>Yeah</h1>
+      ) : (
+        <>
+        <h1>Create Your CV!</h1>
+        <div className='main_container'>
         <GeneralInfo 
           generalInfo={generalInfo}
           onChange={createChangeHandler(setGeneralInfo)}
@@ -39,6 +46,9 @@ function App() {
           onChange={createChangeHandler(setPracticalExperience)} 
         ></PracticalExperience>
       </div>
+      </>
+      )}
+      
     </>
   );
   
