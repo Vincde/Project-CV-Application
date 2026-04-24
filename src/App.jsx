@@ -3,6 +3,7 @@ import EducationalExperience from './components/EducationalExperience';
 import PracticalExperience from './components/PracticalExperience';
 import { useState } from 'react';
 import './App.css';
+import CompleteCV from './components/CompleteCV';
 
 
 
@@ -24,7 +25,9 @@ function App() {
       educationInfo.formState === 'sent' &&
       practicalExperience.formState === 'sent' ? 
       (
-        <h1>Yeah</h1>
+        <CompleteCV infos={[generalInfo, educationInfo, practicalExperience]}
+          setInfos={[setGeneralInfo, setEducationInfo, setPracticalExperience]}
+          ></CompleteCV>
       ) : (
         <>
         <h1>Create Your CV!</h1>
