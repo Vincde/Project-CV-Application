@@ -1,5 +1,14 @@
 export default function PracticalExperience({practicalExperience, onChange}){
     return(
+        <>
+        {practicalExperience.formState === 'sent' ? (
+            <div>
+                <h4>Form Sent!</h4>
+                <button id="formState" value={"edit"} onClick={onChange}>Edit</button>
+            </div>
+        )
+        :
+        (
         <section>
             <h2>Practical Experience</h2>
             <form onSubmit={(e) => e.preventDefault()}>
@@ -29,10 +38,13 @@ export default function PracticalExperience({practicalExperience, onChange}){
                 <br />
 
                 <div className="componentButtons">
-                    <button>Edit</button>
-                    <button>Send</button>
+                    <button id="formState" value={"sent"} onClick={onChange}>Send</button>
                 </div>
             </form>
         </section>
+        )
+    }
+        
+        </>
     )
 }

@@ -1,6 +1,14 @@
 export default function EducationalExperience({educationInfo, onChange}){
     return(
-        <section>
+        <>
+        { educationInfo.formState === 'sent' ? 
+            (
+                <div>
+                    <h4>Form Sent!</h4>
+                    <button value={'edit'} id="formState" onClick={onChange}>Edit</button>
+                </div>
+            ) : (
+            <section>
             <h2>Educational Experience</h2>
             <form onSubmit={(e) => e.preventDefault()}>
                 <label htmlFor="schoolName">Name of the school you graduated in: </label>
@@ -13,10 +21,13 @@ export default function EducationalExperience({educationInfo, onChange}){
                 <input type="text" id="dateOfStudy" value={educationInfo.dateOfStudy} onChange={onChange}/>
                 <br />
                 <div className="componentButtons">
-                    <button>Edit</button>
-                    <button>Send</button>
+                    <button value={'sent'} id="formState" onClick={onChange}>Send</button>
                 </div>
             </form>
         </section>
+            )
+        }
+        
+        </>
     )
 }

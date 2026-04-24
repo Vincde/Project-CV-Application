@@ -1,8 +1,18 @@
 export default function GeneralInformation({generalInfo, onChange}) {
     return(
-        <section>
-            <h2>General Infomation</h2>
-            <form onSubmit={e => e.preventDefault()}>
+        <>
+        {
+            generalInfo.formState === 'sent' ?
+            (
+                <div>
+                    <h4>Form Sent!</h4>
+                    <button id="formState" value={"edit"} onClick={onChange}>Edit</button>
+                </div>
+            ) :
+            (
+            <section>
+                <h2>General Infomation</h2>
+                <form onSubmit={e => e.preventDefault()}>
                 <label htmlFor="name">Name: </label>
                 <input type="text" id="name" value={generalInfo.name} onChange={onChange} />
                 <br />
@@ -13,10 +23,12 @@ export default function GeneralInformation({generalInfo, onChange}) {
                 <input type="number" id="phone" value={generalInfo.phone} onChange={onChange}/>
                 <br />
                 <div className="componentButtons">
-                    <button>Edit</button>
-                    <button>Send</button>
+                    <button id="formState" value={"sent"} onClick={onChange}>Send</button>
                 </div>
             </form>
-        </section>
+            </section>
+            )
+        }
+        </>
     );
 }

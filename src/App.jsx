@@ -8,9 +8,9 @@ import './App.css';
 
 
 function App() {
-  const [generalInfo, setGeneralInfo] = useState({name : '', email: '', phone: ""});
-  const [educationInfo, setEducationInfo] = useState({schoolName: '', titleOfStudy: '', dateOfStudy: ''})
-  const [practicalExperience, setPracticalExperience] = useState({companyName: '', positionTitle: '', mainResponsibilities: '', dateOfStart: '', dateOfEnd: ''});
+  const [generalInfo, setGeneralInfo] = useState({name : '', email: '', phone: "", formState: 'edit'});
+  const [educationInfo, setEducationInfo] = useState({schoolName: '', titleOfStudy: '', dateOfStudy: '', formState: 'edit'})
+  const [practicalExperience, setPracticalExperience] = useState({companyName: '', positionTitle: '', mainResponsibilities: '', dateOfStart: '', dateOfEnd: '', formState: 'edit'});
 
   const createChangeHandler = (setterFunc) => (e) => {
     setterFunc(prev => ({ ...prev, [e.target.id]: e.target.value }));
