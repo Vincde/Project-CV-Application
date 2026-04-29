@@ -8,3 +8,12 @@
     flex-direction: column;
     gap: 10px;
 }
+
+input, textarea{
+    border: 0;
+    outline: none;
+}
+
+button{
+    
+}
