@@ -5,6 +5,7 @@ export default function PracticeForm(){
 
     return(
         <article>
+            <h1>Practical Experience Form</h1>
             <form onSubmit={(e) => e.preventDefault()}>
 
                 <label htmlFor="companyName">Company Name</label>

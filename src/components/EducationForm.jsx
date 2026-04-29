@@ -6,6 +6,7 @@ export default function EducationForm(){
 
     return(
         <article>
+            <h1>Education Form</h1>
             <form onSubmit={(e) => e.preventDefault()}>
 
                 <label htmlFor="schoolName">School Name</label>

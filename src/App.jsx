@@ -1,4 +1,6 @@
 import GeneralForm from "./components/GeneralForm";
+import EducationForm from "./components/EducationForm";
+import PracticeForm from "./components/PracticeForm";
 
 function App() {
 
@@ -11,7 +13,7 @@ function App() {
                 <h1>Compile your new CV!</h1>
                 <GeneralForm></GeneralForm>
                 <EducationForm></EducationForm>
-                <PracticalForm></PracticalForm>
+                <PracticeForm></PracticeForm>
             </section>
 
         </>

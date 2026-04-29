@@ -3,6 +3,7 @@ export default function GeneralForm() {
 
     return(
         <article>
+            <h1>General Information Form</h1>
             <form onSubmit={(e) => e.preventDefault()}>
 
                 <label htmlFor="name">Name</label>
