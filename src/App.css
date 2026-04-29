@@ -1,0 +1,10 @@
+.form-components{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-components form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

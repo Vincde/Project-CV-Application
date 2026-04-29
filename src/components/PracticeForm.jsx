@@ -5,7 +5,7 @@ export default function PracticeForm(){
 
     return(
         <article>
-            <h1>Practical Experience Form</h1>
+            <h2>Practical Experience Form</h2>
             <form onSubmit={(e) => e.preventDefault()}>
 
                 <label htmlFor="companyName">Company Name</label>
@@ -23,6 +23,7 @@ export default function PracticeForm(){
                 <label htmlFor="dateEnd">Date when you finished</label>
                 <input type="date" id="dateEnd"/>
             
+                <button>Send</button>
             </form>
         </article>
     );

@@ -1,6 +1,7 @@
 import GeneralForm from "./components/GeneralForm";
 import EducationForm from "./components/EducationForm";
 import PracticeForm from "./components/PracticeForm";
+import './App.css';
 
 function App() {
 
@@ -9,13 +10,12 @@ function App() {
 
     return(
         <>
-            <section>
-                <h1>Compile your new CV!</h1>
+            <h1 style={{textAlign: "center"}}>Compile your new CV!</h1>
+            <section className="form-components">
                 <GeneralForm></GeneralForm>
                 <EducationForm></EducationForm>
                 <PracticeForm></PracticeForm>
             </section>
-
         </>
     );
 }

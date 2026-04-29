@@ -6,7 +6,7 @@ export default function EducationForm(){
 
     return(
         <article>
-            <h1>Education Form</h1>
+            <h2>Education Form</h2>
             <form onSubmit={(e) => e.preventDefault()}>
 
                 <label htmlFor="schoolName">School Name</label>
@@ -17,6 +17,8 @@ export default function EducationForm(){
 
                 <label htmlFor="dateOfStudy">Date of Study</label>
                 <input type="date" id="dateOfStudy"/>
+
+                <button>Send</button>
             </form>
         </article>
     );
