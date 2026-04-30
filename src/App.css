@@ -3,6 +3,12 @@
     justify-content: space-evenly;
 }
 
+.form-components article{
+    border:4px solid #c7adad;
+    border-radius: 5px;
+    padding: 10px;
+}
+
 .form-components form{
     display: flex;
     flex-direction: column;

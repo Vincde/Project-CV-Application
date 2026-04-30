@@ -1,16 +1,17 @@
 import { useState } from "react";
 
-export default function GeneralForm() {
-    const [info, setInfo] = useState({name: '', email: '', phone: ''});
+export default function GeneralForm({sendForm}) {
+    const [generalInfo, setGeneralInfo] = useState({name: '', email: '', phone: ''});
     const [sent, setSent] = useState(false);
 
-    const handleChangeInfo = (e) => {
-        setInfo((prev) => ({...prev, [e.target.id]: e.target.value}));
+    const handleChangeInput = (e) => {
+        setGeneralInfo((prev) => ({...prev, [e.target.id]: e.target.value}));
     }
 
 
-    const sendForm = () => {
+    const handleSendInfo = () => {
         setSent(true);
+        sendForm({...generalInfo});
     }
 
 
@@ -23,25 +24,25 @@ export default function GeneralForm() {
                 <label htmlFor="name">Name</label>
                 <input type="text"
                 id="name" 
-                value={info.name} 
-                onChange={handleChangeInfo} 
+                value={generalInfo.name} 
+                onChange={handleChangeInput} 
                 disabled={sent === true}/>
 
                 <label htmlFor="email">Email</label>
                 <input type="email" 
                 id="email" 
-                value={info.email} 
-                onChange={handleChangeInfo}
+                value={generalInfo.email} 
+                onChange={handleChangeInput}
                 disabled={sent === true}/>
 
                 <label htmlFor="phone">Phone Number</label>
                 <input type="text" 
                 id="phone" 
-                value={info.phone} 
-                onChange={handleChangeInfo}
+                value={generalInfo.phone} 
+                onChange={handleChangeInput}
                 disabled={sent === true}/>
 
-                <button onClick={sendForm}>Send</button>
+                <button onClick={handleSendInfo}>Send</button>
                 <button onClick={() => setSent(false)}>Edit</button>
             </form>
         </article>
