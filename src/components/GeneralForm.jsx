@@ -2,10 +2,17 @@ import { useState } from "react";
 
 export default function GeneralForm() {
     const [info, setInfo] = useState({name: '', email: '', phone: ''});
+    const [sent, setSent] = useState(false);
 
     const handleChangeInfo = (e) => {
         setInfo((prev) => ({...prev, [e.target.id]: e.target.value}));
     }
+
+
+    const sendForm = () => {
+        setSent(true);
+    }
+
 
 
     return(
@@ -14,15 +21,28 @@ export default function GeneralForm() {
             <form onSubmit={(e) => e.preventDefault()}>
 
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" value={info.name} onChange={handleChangeInfo}/>
+                <input type="text"
+                id="name" 
+                value={info.name} 
+                onChange={handleChangeInfo} 
+                disabled={sent === true}/>
 
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" value={info.email} onChange={handleChangeInfo}/>
+                <input type="email" 
+                id="email" 
+                value={info.email} 
+                onChange={handleChangeInfo}
+                disabled={sent === true}/>
 
                 <label htmlFor="phone">Phone Number</label>
-                <input type="text" id="phone" value={info.phone} onChange={handleChangeInfo}/>
+                <input type="text" 
+                id="phone" 
+                value={info.phone} 
+                onChange={handleChangeInfo}
+                disabled={sent === true}/>
 
-                <button>Send</button>
+                <button onClick={sendForm}>Send</button>
+                <button onClick={() => setSent(false)}>Edit</button>
             </form>
         </article>
     );
