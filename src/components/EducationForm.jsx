@@ -23,6 +23,7 @@ export default function EducationForm({sendForm}){
                     editedObj.push({...el});
                 }
             });
+            setEducationInfo([...editedObj]);
             setInputs((prev) => ({...prev, id: -1}));
         }
 
