@@ -32,3 +32,16 @@ button{
 .form-components input, .form-components textarea{
     margin-bottom: 15px;
 }
+
+
+.infoBox{
+    border:4px solid #c7adad;
+    margin-top:20px;
+}
+
+.infoBox-section{
+    padding:5px;
+    border-radius: 5px;
+    display:flex;
+    gap:10px;
+}

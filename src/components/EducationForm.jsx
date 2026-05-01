@@ -1,8 +1,12 @@
+import arrowUp from './../../public/arrow_drop_up.png';
+import arrowDown from './../../public/arrow_drop_down.png';
+
+
 import { useState } from "react";
 
 export default function EducationForm({sendForm}){
     const [educationInfo, setEducationInfo] = useState([]);
-    const [inputs, setInputs] = useState({id: -1, schoolName: '', titleOfStudy: '', dateOfStudy: ''});
+    const [inputs, setInputs] = useState({id: -1, schoolName: '', titleOfStudy: '', dateOfStudy: '', show: false});
     const [key, setKey] = useState(0);
 
 
@@ -44,6 +48,20 @@ export default function EducationForm({sendForm}){
     }
 
 
+    const showDialog = (id) => {
+        const editedObj = [];
+        educationInfo.map((el) => {
+            if(el.id === id){
+                editedObj.push({...el, show: !el.show});
+            }else{
+                editedObj.push(el);
+            }
+        });
+        setEducationInfo([...editedObj]);
+        sendForm(editedObj);
+    }
+
+
     return(
         <article>
             <h2>Education Form</h2>
@@ -66,15 +84,42 @@ export default function EducationForm({sendForm}){
 
                 educationInfo.map((el) => {
                     return(
-                        <div key={el.id}>
-                            <h3>n. {el.id}</h3>
-                            <button onClick={() => handleEditInfo(el.id)}>Edit</button>
-                            <button onClick={() => handleDeleteInfo(el.id)}>Delete</button>
-                        </div>
+                        /* el.show === true ? (
+                            <div key={el.id} >
+                           <div key={el.id} className='infoBox' >
+                                <span>n. {el.id}</span>
+                                <button onClick={() => handleEditInfo(el.id)}>Edit</button>
+                                <button onClick={() => handleDeleteInfo(el.id)}>Delete</button>
+                                <img src={arrowUp} alt="" onClick={() => showDialog(el.id)}/>
+                            </div>
+                            <div>
+                                
+                                   <p>SchoolName: {el.schoolName}</p>
+                                   <p>Title Of Study: {el.titleOfStudy}</p>
+                                   <p>Date Of Study: {el.dateOfStudy}</p>
+                            </div>
+                            </div>
+                        ) : ( */
+                            <div key={el.id} className='infoBox'>
+                                <div className="infoBox-section">
+                                    <span>n. {el.id}</span>
+                                    <button onClick={() => handleEditInfo(el.id)}>Edit</button>
+                                    <button onClick={() => handleDeleteInfo(el.id)}>Delete</button>
+                                    <img src={el.show === true ? arrowUp : arrowDown} alt="" onClick={() => showDialog(el.id)}/>
+                                </div>
+                                {el.show === true ? (
+                                    <>
+                                    <span>SchoolName: {el.schoolName}</span><br />
+                                   <span>Title Of Study: {el.titleOfStudy}</span><br />
+                                   <span>Date Of Study: {el.dateOfStudy}</span><br />
+                                   </>
+                                ) : null}
+                            </div>
+                        /* ) */
                     );
                 })
 
-            ) : null
+                ) : null
             }
         </article>
     );
