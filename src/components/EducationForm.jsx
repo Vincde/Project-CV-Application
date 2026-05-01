@@ -11,11 +11,12 @@ export default function EducationForm({sendForm}){
     }
 
     const handleAddInfo = () => {
+        let editedObj = [];
         if(inputs.id === -1){
-            setEducationInfo([...educationInfo, {...inputs, id : key}]);
+            editedObj = [...educationInfo, {...inputs, id : key}];
+            setEducationInfo(editedObj);
             setKey(key + 1);
         }else{
-            const editedObj = [];
             educationInfo.map((el) => {
                 if(el.id === inputs.id){
                     editedObj.push({...inputs});
@@ -27,7 +28,7 @@ export default function EducationForm({sendForm}){
             setInputs((prev) => ({...prev, id: -1}));
         }
 
-        sendForm([...educationInfo]);
+        sendForm(editedObj);
     }
 
 
@@ -39,6 +40,7 @@ export default function EducationForm({sendForm}){
     const handleDeleteInfo = (id) => {
         const deleteObj = educationInfo.filter((el) => el.id !== id);
         setEducationInfo([...deleteObj]);
+        sendForm(deleteObj);
     }
 
 
@@ -65,7 +67,7 @@ export default function EducationForm({sendForm}){
                 educationInfo.map((el) => {
                     return(
                         <div key={el.id}>
-                            <h3>id : {el.id}</h3>
+                            <h3>n. {el.id}</h3>
                             <button onClick={() => handleEditInfo(el.id)}>Edit</button>
                             <button onClick={() => handleDeleteInfo(el.id)}>Delete</button>
                         </div>
