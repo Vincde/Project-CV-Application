@@ -44,6 +44,7 @@ export default function EducationForm({sendForm}){
     const handleDeleteInfo = (id) => {
         const deleteObj = educationInfo.filter((el) => el.id !== id);
         setEducationInfo([...deleteObj]);
+        setInputs({id: -1, schoolName: '', titleOfStudy: '', dateOfStudy: '', show: false});
         sendForm(deleteObj);
     }
 
@@ -84,38 +85,21 @@ export default function EducationForm({sendForm}){
 
                 educationInfo.map((el) => {
                     return(
-                        /* el.show === true ? (
-                            <div key={el.id} >
-                           <div key={el.id} className='infoBox' >
+                        <div key={el.id} className='infoBox'>
+                            <div className="infoBox-section">
                                 <span>n. {el.id}</span>
                                 <button onClick={() => handleEditInfo(el.id)}>Edit</button>
                                 <button onClick={() => handleDeleteInfo(el.id)}>Delete</button>
-                                <img src={arrowUp} alt="" onClick={() => showDialog(el.id)}/>
+                                <img src={el.show === true ? arrowUp : arrowDown} alt="" onClick={() => showDialog(el.id)}/>
                             </div>
-                            <div>
-                                
-                                   <p>SchoolName: {el.schoolName}</p>
-                                   <p>Title Of Study: {el.titleOfStudy}</p>
-                                   <p>Date Of Study: {el.dateOfStudy}</p>
-                            </div>
-                            </div>
-                        ) : ( */
-                            <div key={el.id} className='infoBox'>
-                                <div className="infoBox-section">
-                                    <span>n. {el.id}</span>
-                                    <button onClick={() => handleEditInfo(el.id)}>Edit</button>
-                                    <button onClick={() => handleDeleteInfo(el.id)}>Delete</button>
-                                    <img src={el.show === true ? arrowUp : arrowDown} alt="" onClick={() => showDialog(el.id)}/>
-                                </div>
-                                {el.show === true ? (
-                                    <>
-                                    <span>SchoolName: {el.schoolName}</span><br />
-                                   <span>Title Of Study: {el.titleOfStudy}</span><br />
-                                   <span>Date Of Study: {el.dateOfStudy}</span><br />
-                                   </>
-                                ) : null}
-                            </div>
-                        /* ) */
+                            {el.show === true ? (
+                                <>
+                                <span>SchoolName: {el.schoolName}</span><br />
+                               <span>Title Of Study: {el.titleOfStudy}</span><br />
+                               <span>Date Of Study: {el.dateOfStudy}</span><br />
+                               </>
+                            ) : null}
+                        </div>
                     );
                 })
 
