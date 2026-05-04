@@ -42,8 +42,10 @@ export default function GeneralForm({sendForm}) {
                 onChange={handleChangeInput}
                 disabled={sent === true}/>
 
-                <button onClick={handleSendInfo}>Send</button>
-                <button onClick={() => setSent(false)}>Edit</button>
+                <div>
+                    <button onClick={handleSendInfo}>Send</button>
+                    <button onClick={() => setSent(false)} style={{marginLeft:"10px"}}>Edit</button>
+                </div>
             </form>
         </article>
     );
