@@ -64,7 +64,6 @@ export default function EducationForm({sendForm}){
             }
         });
         setEducationInfo([...editedObj]);
-        sendForm(editedObj);
     }
 
 

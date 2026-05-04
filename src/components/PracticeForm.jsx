@@ -66,7 +66,6 @@ export default function PracticeForm({sendForm}){
             }
         });
         setPracticeInfo([...editedObj]);
-        sendForm(editedObj);
     }
 
 
