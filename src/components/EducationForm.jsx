@@ -36,6 +36,10 @@ export default function EducationForm({sendForm}){
         sendForm(editedObj);
     }
 
+    const handleCancelEdit = () => {
+        setInputs({id: -1, schoolName: '', titleOfStudy: '', dateOfStudy: '', show: false});
+    }
+
 
     const handleEditInfo = (id) => {
         const editObject = educationInfo.find((el) => el.id === id);
@@ -78,7 +82,10 @@ export default function EducationForm({sendForm}){
                 <label htmlFor="dateOfStudy">Date of Study</label>
                 <input type="date" id="dateOfStudy" value={inputs.dateOfStudy} onChange={handleInputChange}/>
 
-                <button onClick={handleAddInfo}>{inputs.id === -1 ? "Send" : "Change" }</button>
+                <div>
+                    <button onClick={handleAddInfo}>{inputs.id === -1 ? "Send" : "Change" }</button>
+                    {inputs.id !== -1 ? <button onClick={handleCancelEdit} style={{marginLeft:"10px"}}>Cancel</button> : null}
+                </div>
             </form>
 
             {

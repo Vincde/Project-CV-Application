@@ -7,7 +7,7 @@ import { useState } from "react";
 function App() {
     const [cvInfo, setCvInfo] = useState({});
     const [educationInfo, setEducationInfo] = useState([]);
-
+    const [practiceInfo, setPracticeInfo] = useState([]);
 
     const setInfoObject = (infoObject) => {
         setCvInfo({...infoObject});
@@ -15,6 +15,10 @@ function App() {
 
     const setEducationObject = (educationObject) => {
         setEducationInfo([...educationObject]);
+    }
+
+    const setPracticeObject = (practiceObject) => {
+        setPracticeInfo([...practiceObject]);
     }
 
 
@@ -26,11 +30,14 @@ function App() {
             <section className="form-components">
                 <GeneralForm sendForm={setInfoObject}></GeneralForm>
                 <EducationForm sendForm={setEducationObject}></EducationForm>
-                <PracticeForm></PracticeForm>
+                <PracticeForm sendForm={setPracticeObject}></PracticeForm>
             </section>
 
-            <h1>{cvInfo.name}</h1>
-            { educationInfo.length !== 0 ? <h1>{educationInfo[0].schoolName}</h1> : null}
+            <p>
+                {cvInfo.name}
+                {educationInfo.length !== 0 ? educationInfo[0].schoolName : null}
+                {practiceInfo.length !== 0 ? practiceInfo[0].companyName : null}
+            </p>
         </>
     );
 }
