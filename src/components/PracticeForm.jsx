@@ -109,13 +109,13 @@ export default function PracticeForm({sendForm}){
                                 <img src={el.show === true ? arrowUp : arrowDown} alt="show more / show less" onClick={() => showDialog(el.id)}/>
                             </div>
                             {el.show === true ? (
-                                <>
-                               <span>Company name: {el.companyName}</span><br />
-                               <span>Position Title: {el.positionTitle}</span><br />
-                               <span>Main Responsibilities: {el.mainResponsibilities}</span><br />
-                               <span>Date Of Start: {el.mainResponsibilities}</span><br />
-                               <span>Date Of End: {el.mainResponsibilities}</span><br />
-                               </>
+                                <div className="infoBox-section-span">
+                               <span><strong>Company name</strong>: {el.companyName}</span>
+                               <span><strong>Position Title</strong>: {el.positionTitle}</span>
+                               <span><strong>Main Responsibilities</strong>: {el.mainResponsibilities}</span>
+                               <span><strong>Date Of Start</strong>: {el.mainResponsibilities}</span>
+                               <span><strong>Date Of End</strong>: {el.mainResponsibilities}</span>
+                               </div>
                             ) : null}
                         </div>
                     );

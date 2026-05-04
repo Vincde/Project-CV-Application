@@ -45,3 +45,13 @@ button{
     display:flex;
     gap:10px;
 }
+
+.infoBox-section > img{
+    transform: translateY(-2px);
+}
+
+.infoBox-section-span{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

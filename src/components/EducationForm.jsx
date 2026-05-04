@@ -99,11 +99,11 @@ export default function EducationForm({sendForm}){
                                 <img src={el.show === true ? arrowUp : arrowDown} alt="show more / show less" onClick={() => showDialog(el.id)}/>
                             </div>
                             {el.show === true ? (
-                                <>
-                                <span>SchoolName: {el.schoolName}</span><br />
-                               <span>Title Of Study: {el.titleOfStudy}</span><br />
-                               <span>Date Of Study: {el.dateOfStudy}</span><br />
-                               </>
+                                <div className='infoBox-section-span'>
+                                <span><strong>SchoolName</strong>: {el.schoolName}</span>
+                               <span><strong>Title Of Study</strong>: {el.titleOfStudy}</span>
+                               <span><strong>Date Of Study</strong>: {el.dateOfStudy}</span>
+                               </div>
                             ) : null}
                         </div>
                     );
