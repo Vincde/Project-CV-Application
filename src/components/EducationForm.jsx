@@ -20,6 +20,7 @@ export default function EducationForm({sendForm}){
             editedObj = [...educationInfo, {...inputs, id : key}];
             setEducationInfo(editedObj);
             setKey(key + 1);
+            setInputs({id: -1, schoolName: '', titleOfStudy: '', dateOfStudy: '', show: false});
         }else{
             educationInfo.map((el) => {
                 if(el.id === inputs.id){
@@ -29,7 +30,7 @@ export default function EducationForm({sendForm}){
                 }
             });
             setEducationInfo([...editedObj]);
-            setInputs((prev) => ({...prev, id: -1}));
+            setInputs({id: -1, schoolName: '', titleOfStudy: '', dateOfStudy: '', show: false});
         }
 
         sendForm(editedObj);
@@ -77,12 +78,10 @@ export default function EducationForm({sendForm}){
                 <label htmlFor="dateOfStudy">Date of Study</label>
                 <input type="date" id="dateOfStudy" value={inputs.dateOfStudy} onChange={handleInputChange}/>
 
-                <button onClick={handleAddInfo}>Send</button>
+                <button onClick={handleAddInfo}>{inputs.id === -1 ? "Send" : "Change" }</button>
             </form>
 
             {
-                educationInfo !== null ? (
-
                 educationInfo.map((el) => {
                     return(
                         <div key={el.id} className='infoBox'>
@@ -102,8 +101,6 @@ export default function EducationForm({sendForm}){
                         </div>
                     );
                 })
-
-                ) : null
             }
         </article>
     );
