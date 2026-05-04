@@ -92,7 +92,7 @@ export default function EducationForm({sendForm}){
                     return(
                         <div key={el.id} className='infoBox'>
                             <div className="infoBox-section">
-                                <span>n. {el.id}</span>
+                                <span>{el.titleOfStudy}</span>
                                 <button onClick={() => handleEditInfo(el.id)}>Edit</button>
                                 <button onClick={() => handleDeleteInfo(el.id)}>Delete</button>
                                 <img src={el.show === true ? arrowUp : arrowDown} alt="show more / show less" onClick={() => showDialog(el.id)}/>
