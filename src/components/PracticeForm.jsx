@@ -106,7 +106,7 @@ export default function PracticeForm({sendForm}){
                                 <span>n. {el.id}</span>
                                 <button onClick={() => handleEditInfo(el.id)}>Edit</button>
                                 <button onClick={() => handleDeleteInfo(el.id)}>Delete</button>
-                                <img src={el.show === true ? arrowUp : arrowDown} alt="" onClick={() => showDialog(el.id)}/>
+                                <img src={el.show === true ? arrowUp : arrowDown} alt="show more / show less" onClick={() => showDialog(el.id)}/>
                             </div>
                             {el.show === true ? (
                                 <>
