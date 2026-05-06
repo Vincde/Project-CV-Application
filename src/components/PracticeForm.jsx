@@ -107,11 +107,31 @@ export default function PracticeForm({sendForm}){
                             </div>
                             {el.show === true ? (
                                 <div className="infoBox-section-span">
-                               <span><strong>Company name</strong>: {el.companyName}</span>
-                               <span><strong>Position Title</strong>: {el.positionTitle}</span>
-                               <span><strong>Main Responsibilities</strong>: {el.mainResponsibilities}</span>
-                               <span><strong>Date Of Start</strong>: {el.mainResponsibilities}</span>
-                               <span><strong>Date Of End</strong>: {el.mainResponsibilities}</span>
+                                <div>
+                                    <strong>Company name: </strong>
+                                    <span>{el.companyName}</span>
+                                </div>
+
+                                <div>
+                                    <strong>Position Title: </strong>
+                                    <span>{el.positionTitle}</span>
+                                </div>
+
+                                <div>
+                                   <strong>Main Responsibilities: </strong>
+                                   <span>{el.mainResponsibilities}</span>
+                                </div>
+
+                                <div>
+                                    <strong>Date Of Start: </strong>
+                                    <span>{el.mainResponsibilities}</span>
+                                </div>
+
+                                <div>
+                                   <strong>Date Of End: </strong>
+                                   <span>{el.mainResponsibilities}</span>
+                                </div>
+                                
                                </div>
                             ) : null}
                         </div>
