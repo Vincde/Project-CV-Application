@@ -99,9 +99,18 @@ export default function EducationForm({sendForm}){
                             </div>
                             {el.show === true ? (
                                 <div className='infoBox-section-span'>
-                                <span><strong>SchoolName</strong>: {el.schoolName}</span>
-                               <span><strong>Title Of Study</strong>: {el.titleOfStudy}</span>
-                               <span><strong>Date Of Study</strong>: {el.dateOfStudy}</span>
+                                    <div>
+                                        <strong>SchoolName: </strong>
+                                        <span>{el.schoolName}</span>
+                                    </div>
+                                    <div>
+                                        <strong>Title Of Study: </strong>
+                                        <span>{el.titleOfStudy}</span>
+                                    </div>
+                                    <div>
+                                        <strong>Date Of Study: </strong>
+                                        <span>{el.dateOfStudy}</span>
+                                    </div>
                                </div>
                             ) : null}
                         </div>
