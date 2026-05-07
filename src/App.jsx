@@ -47,7 +47,7 @@ function App() {
         {
             complete === true ? (
                 <p>
-                {cvInfo.name}
+                {cvInfo.image}
                 {educationInfo.length !== 0 ? educationInfo[0].schoolName : null}
                 {practiceInfo.length !== 0 ? practiceInfo[0].companyName : null}
                 </p>

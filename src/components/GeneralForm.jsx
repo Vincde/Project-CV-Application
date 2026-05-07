@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function GeneralForm({sendForm}) {
-    const [generalInfo, setGeneralInfo] = useState({name: '', email: '', phone: ''});
+    const [generalInfo, setGeneralInfo] = useState({name: '', email: '', phone: '', image: ''});
     const [sent, setSent] = useState(false);
 
     const handleChangeInput = (e) => {
@@ -42,6 +42,34 @@ export default function GeneralForm({sendForm}) {
                 value={generalInfo.phone} 
                 onChange={handleChangeInput}
                 disabled={sent === true}/>
+
+                <label htmlFor="image">Image</label>
+                <input type="file" 
+                id="image"  
+                accept="image/*"
+                onChange={handleChangeInput}
+                disabled={sent === true}/>
+
+
+                {/* function DettagliFile({ fileSelezionato }) {
+  const [anteprima, setAnteprima] = useState(null);
+
+  // Usiamo useEffect per generare l'anteprima ogni volta che la prop cambia
+  useEffect(() => {
+    if (!fileSelezionato) return;
+
+    // Creiamo l'URL temporaneo per l'immagine
+    const objectUrl = URL.createObjectURL(fileSelezionato);
+    setAnteprima(objectUrl);
+
+    // Pulizia: quando il componente viene smontato o il file cambia, 
+    // liberiamo la memoria revocando l'URL precedente
+    return () => URL.revokeObjectURL(objectUrl);
+  }, [fileSelezionato]);
+  
+
+  <img src={anteprima}  />
+  */}
 
                 <div>
                     <button onClick={handleSendInfo}>Send</button>
