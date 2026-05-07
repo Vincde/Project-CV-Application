@@ -1,3 +1,18 @@
+input, textarea{
+    border-radius: 5px;
+    border: 1px solid #c7adad;
+    outline: none;
+}
+
+button{
+    border-radius: 5px;
+    font-weight:550;
+    outline: none;
+    border: 1px solid #c7adad;
+    background-color: #afce8c8e;
+}
+
+
 .form-components{
     display: flex;
     justify-content: space-evenly;
@@ -17,23 +32,22 @@
     gap: 5px;
 }
 
-input, textarea{
-    border-radius: 5px;
-    border: 1px solid #c7adad;
-    outline: none;
-}
 
-button{
-    border-radius: 5px;
-    font-weight:550;
-    outline: none;
-    border: 1px solid #c7adad;
-    background-color: #afce8c8e;
-}
 
 .form-components input, .form-components textarea{
     margin-bottom: 15px;
 }
+
+.form-title-bttn{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title-bttn button{
+    align-self:flex-end;
+}
+
 
 
 .infoBox{

@@ -26,12 +26,17 @@ function App() {
 
     return(
         <>
-            <h1 style={{textAlign: "center"}}>Compile your new CV!</h1>
+            <div className="form-title-bttn">
+                <button>Create Your New CV!</button>   
+                <h1 style={{textAlign: "center"}}>Compile your new CV!</h1>
+            </div>
+            
             <section className="form-components">
                 <GeneralForm sendForm={setInfoObject}></GeneralForm>
                 <EducationForm sendForm={setEducationObject}></EducationForm>
                 <PracticeForm sendForm={setPracticeObject}></PracticeForm>
             </section>
+            
 
             <p>
                 {cvInfo.name}
