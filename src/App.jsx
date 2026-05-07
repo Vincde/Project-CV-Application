@@ -1,6 +1,7 @@
 import GeneralForm from "./components/GeneralForm";
 import EducationForm from "./components/EducationForm";
 import PracticeForm from "./components/PracticeForm";
+import CompleteCV from "./components/CompleteCV";
 import './App.css';
 import { useState } from "react";
 
@@ -47,9 +48,9 @@ function App() {
         {
             complete === true ? (
                 <p>
-                {cvInfo.image}
                 {educationInfo.length !== 0 ? educationInfo[0].schoolName : null}
                 {practiceInfo.length !== 0 ? practiceInfo[0].companyName : null}
+                <CompleteCV generalInfo={cvInfo}></CompleteCV>
                 </p>
             ) : null
         }
