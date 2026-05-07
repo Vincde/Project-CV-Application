@@ -9,11 +9,13 @@ export default function PracticeForm({sendForm}){
     const [key, setKey] = useState(0);
 
 
+    // only changes the input fields
     const handleInputChange = (e) => {
         setInputs((prev) => ({...prev, [e.target.id]: e.target.value}));
     }
 
 
+    // adds info in two ways: The element already exists or it doesn't
      const handleAddInfo = () => {
         let editedObj = [];
         if(inputs.id === -1){
@@ -36,16 +38,18 @@ export default function PracticeForm({sendForm}){
         sendForm(editedObj);
     }
 
+    //resets the input fields
      const handleCancelEdit = () => {
         setInputs({id: -1, companyName: '', positionTitle: '', mainResponsibilities: '', dateStart: '', dateEnd: '', show: false});
     }
 
-
+    // sets the input fields with the selected box
     const handleEditInfo = (id) => {
         const editObject = practiceInfo.find((el) => el.id === id);
         setInputs({...editObject});
     }
 
+    // delete selected box
     const handleDeleteInfo = (id) => {
         const deleteObj = practiceInfo.filter((el) => el.id !== id);
         setPracticeInfo([...deleteObj]);
@@ -53,7 +57,7 @@ export default function PracticeForm({sendForm}){
         sendForm(deleteObj);
     }
 
-
+    // trigger the showing of selected box
     const showDialog = (id) => {
         const editedObj = [];
         practiceInfo.map((el) => {

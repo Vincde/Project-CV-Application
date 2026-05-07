@@ -10,10 +10,13 @@ export default function EducationForm({sendForm}){
     const [key, setKey] = useState(0);
 
 
+    // only changes the input fields
     const handleInputChange = (e) => {
         setInputs((prev) => ({...prev, [e.target.id]: e.target.value}));
     }
 
+
+    // adds info in two ways: The element already exists or it doesn't
     const handleAddInfo = () => {
         let editedObj = [];
         if(inputs.id === -1){
@@ -36,16 +39,19 @@ export default function EducationForm({sendForm}){
         sendForm(editedObj);
     }
 
+    //resets the input fields
     const handleCancelEdit = () => {
         setInputs({id: -1, schoolName: '', titleOfStudy: '', dateOfStudy: '', show: false});
     }
 
 
+    // sets the input fields with the selected box
     const handleEditInfo = (id) => {
         const editObject = educationInfo.find((el) => el.id === id);
         setInputs({...editObject});
     }
 
+    // delete selected box
     const handleDeleteInfo = (id) => {
         const deleteObj = educationInfo.filter((el) => el.id !== id);
         setEducationInfo([...deleteObj]);
@@ -54,6 +60,7 @@ export default function EducationForm({sendForm}){
     }
 
 
+    // trigger the showing of selected box
     const showDialog = (id) => {
         const editedObj = [];
         educationInfo.map((el) => {
