@@ -5,9 +5,16 @@ import './App.css';
 import { useState } from "react";
 
 function App() {
+    const [complete, setComplete] = useState(false);
     const [cvInfo, setCvInfo] = useState({});
     const [educationInfo, setEducationInfo] = useState([]);
     const [practiceInfo, setPracticeInfo] = useState([]);
+
+
+    const handleComplete = () => {
+        setComplete(!complete);
+    }
+
 
     const setInfoObject = (infoObject) => {
         setCvInfo({...infoObject});
@@ -27,7 +34,7 @@ function App() {
     return(
         <>
             <div className="form-title-bttn">
-                <button>Create Your New CV!</button>   
+                <button onClick={handleComplete}>Create Your New CV!</button>   
                 <h1 style={{textAlign: "center"}}>Compile your new CV!</h1>
             </div>
             
@@ -37,12 +44,16 @@ function App() {
                 <PracticeForm sendForm={setPracticeObject}></PracticeForm>
             </section>
             
-
-            <p>
+        {
+            complete === true ? (
+                <p>
                 {cvInfo.name}
                 {educationInfo.length !== 0 ? educationInfo[0].schoolName : null}
                 {practiceInfo.length !== 0 ? practiceInfo[0].companyName : null}
-            </p>
+                </p>
+            ) : null
+        }
+            
         </>
     );
 }

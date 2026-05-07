@@ -36,7 +36,8 @@ export default function GeneralForm({sendForm}) {
                 disabled={sent === true}/>
 
                 <label htmlFor="phone">Phone Number</label>
-                <input type="text" 
+                <input type="tel" 
+                placeholder="123-456-7890"
                 id="phone" 
                 value={generalInfo.phone} 
                 onChange={handleChangeInput}
