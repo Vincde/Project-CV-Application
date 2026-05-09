@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 
-export default function CompleteCV({generalInfo}) {
+export default function CompleteCV({generalInfo, educationInfo, practiceInfo, handleEdit}) {
     const image = generalInfo.image;
     const [anteprima, setAnteprima] = useState(null);
   
@@ -15,6 +15,15 @@ export default function CompleteCV({generalInfo}) {
   }, [image]);
   
   return(
-  <img src={anteprima} alt="" />
+    <>
+    <div className="completeCV-generalInfo">
+      <p>General Information</p>
+      {educationInfo.schoolName}
+      {practiceInfo.companyName}
+      <p>Profile Pic</p>
+      <img src={anteprima} alt="" />
+    </div>
+    <button onClick={handleEdit}>edit</button>
+    </>
   );
 }

@@ -34,6 +34,8 @@ function App() {
 
     return(
         <>
+        {complete === false ? (
+            <>
             <div className="form-title-bttn">
                 <button onClick={handleComplete}>Create Your New CV!</button>   
                 <h1 style={{textAlign: "center"}}>Compile your new CV!</h1>
@@ -44,15 +46,18 @@ function App() {
                 <EducationForm sendForm={setEducationObject}></EducationForm>
                 <PracticeForm sendForm={setPracticeObject}></PracticeForm>
             </section>
-            
-        {
-            complete === true ? (
-                <p>
+            </>
+        ) : (
+            <>
                 {educationInfo.length !== 0 ? educationInfo[0].schoolName : null}
                 {practiceInfo.length !== 0 ? practiceInfo[0].companyName : null}
-                <CompleteCV generalInfo={cvInfo}></CompleteCV>
-                </p>
-            ) : null
+                <CompleteCV generalInfo={cvInfo}
+                educationInfo={educationInfo}
+                practiceInfo={practiceInfo}
+                handleEdit={handleComplete}
+                ></CompleteCV>
+            </>
+        )
         }
             
         </>
