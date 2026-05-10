@@ -3,3 +3,9 @@
     align-items: center;
     gap: 10px;
 }
+
+.completeCV-editButton {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 7rem;
+}

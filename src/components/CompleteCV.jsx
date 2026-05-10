@@ -7,13 +7,13 @@ import './../styles/completeCV.css';
 
 export default function CompleteCV({generalInfo, educationInfo, practiceInfo, handleEdit}) {
     const image = generalInfo.image;
-    const [anteprima, setAnteprima] = useState(null);
+    const [preview, setPreview] = useState(null);
   
   useEffect(() => {
     if (!image) return;
 
     const objectUrl = URL.createObjectURL(image);
-    setAnteprima(objectUrl);
+    setPreview(objectUrl);
 
     return () => URL.revokeObjectURL(objectUrl);
   }, [image]);
@@ -21,12 +21,12 @@ export default function CompleteCV({generalInfo, educationInfo, practiceInfo, ha
   return(
     <div className="completeCV-container">
       
-      <button onClick={handleEdit}>edit</button>
+      <div className="completeCV-editButton"><button onClick={handleEdit}>edit</button></div>
 
       <div className="completeCV-generalInfo">
         <p>General Information</p>
 
-        <img src={anteprima} alt="" />
+        <img src={preview} alt="" />
 
         <div>
           <img src={nameIcon} alt="" />
