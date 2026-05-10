@@ -45,9 +45,20 @@ export default function CompleteCV({generalInfo, educationInfo, practiceInfo, ha
 
         
       </div>
-    
-      {educationInfo.schoolName}
+
+      <div className="completeCV-educationInfo">
+        <p>Education Info</p>
+      </div>
+
+
+      <div className="completeCV-practiceInfo">
+        <p>Practice Info</p>
+
+        {educationInfo.schoolName}
       {practiceInfo.companyName}
+      </div>
+    
+      
     </div>
   );
 }
