@@ -29,13 +29,14 @@
 .completeCV-educationInfo,
 .completeCV-practiceInfo{
     border:4px solid #c7adad;
+    padding: 5px;
 }
 
 .completeCV-generalInfo h2,
 .completeCV-educationInfo h2,
 .completeCV-practiceInfo h2{
     text-align: center;
-    margin:0; /* ... Needs to be reviewed the possibility of this */
+    margin-top:0;
 }
 
 
@@ -45,9 +46,6 @@
     grid-column-end: 1;
 }
 
-.completeCV-educationInfo{
-
-}
 
 .completeCV-practiceInfo{
     grid-column-start: 2; 
@@ -57,5 +55,23 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.educationInfo-containerBox{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.practiceInfo-containerBox{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.educationInfo-singleBox,
+.practiceInfo-singleBox{
+    border:3px solid #c7adad;
+    padding:5px;
 }
 
