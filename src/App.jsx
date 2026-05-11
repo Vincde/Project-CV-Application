@@ -36,7 +36,7 @@ function App() {
         <>
         {complete === false ? (
             <>
-            <div className="form-title-bttn">
+            <div className="form-title">
                 <button onClick={handleComplete}>Create Your New CV!</button>   
                 <h1 style={{textAlign: "center"}}>Compile your new CV!</h1>
             </div>

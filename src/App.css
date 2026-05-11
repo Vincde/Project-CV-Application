@@ -12,6 +12,18 @@ button{
     background-color: #afce8c8e;
 }
 
+.form-title{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title button{
+    align-self:flex-end;
+}
+
+
+
 
 .form-components{
     display: flex;
@@ -38,16 +50,6 @@ button{
     margin-bottom: 15px;
 }
 
-.form-title-bttn{
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-}
-
-.form-title-bttn button{
-    align-self:flex-end;
-}
-
 
 
 .infoBox{
@@ -55,36 +57,36 @@ button{
     margin-top:20px;
 }
 
-.infoBox-section{
+.infoBox-summary{
     padding:5px;
     border-radius: 5px;
     display:flex;
     gap:10px;
 }
 
-.infoBox-section > img{
+.infoBox-summary > img{
     transform: translateY(-2px);
 }
 
-.infoBox-section > span{
+.infoBox-summary > span{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
 
 
-.infoBox-section-span{
+.infoBox-expanded{
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap:5px;
 }
 
-.infoBox-section-span > div > strong{
+.infoBox-expanded > div > strong{
     white-space: nowrap;
 }
 
 
-.infoBox-section-span > div > span{
+.infoBox-expanded > div > span{
     word-wrap: break-word;
 }
 

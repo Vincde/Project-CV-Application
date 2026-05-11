@@ -103,14 +103,14 @@ export default function PracticeForm({sendForm}){
                 practiceInfo.map((el) => {
                     return(
                         <div key={el.id} className='infoBox'>
-                            <div className="infoBox-section">
+                            <div className="infoBox-summary">
                                 <span>{el.companyName}</span>
                                 <button onClick={() => handleEditInfo(el.id)}>Edit</button>
                                 <button onClick={() => handleDeleteInfo(el.id)}>Delete</button>
                                 <img src={el.show === true ? arrowUp : arrowDown} alt="show more / show less" onClick={() => showDialog(el.id)}/>
                             </div>
                             {el.show === true ? (
-                                <div className="infoBox-section-span">
+                                <div className="infoBox-expanded">
                                 <div>
                                     <strong>Company name: </strong>
                                     <span>{el.companyName}</span>
