@@ -1,13 +1,37 @@
-.completeCV-container{
+.completeCV{
     display: grid;
-    grid-template-rows: 30px 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr;
     grid-template-columns: 1fr 2fr;
+    gap: 5px;
 }
 
 .completeCV-editButton{
+    display: flex;
+    justify-content: space-between;
     grid-row-start: 1;
     grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
+
+.completeCV-editButton button{
+    margin-right: 7rem;
+    width: 70px;
+    align-self: center;
+}
+
+.completeCV-generalInfo,
+.completeCV-educationInfo{
+    margin-top: 50px;
+}
+
+.completeCV-generalInfo,
+.completeCV-educationInfo,
+.completeCV-practiceInfo{
+    border:4px solid #c7adad;
+}
+
+
 
 .completeCV-generalInfo{
     grid-column-start: 1;
@@ -28,8 +52,3 @@
     gap: 10px;
 }
 
-.completeCV-editButton {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 7rem;
-}

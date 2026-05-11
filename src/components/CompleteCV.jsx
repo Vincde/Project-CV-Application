@@ -19,12 +19,15 @@ export default function CompleteCV({generalInfo, educationInfo, practiceInfo, ha
   }, [image]);
   
   return(
-    <div className="completeCV-container">
+    <div className="completeCV">
       
-      <div className="completeCV-editButton"><button onClick={handleEdit}>edit</button></div>
+      <div className="completeCV-editButton">
+        <h1>Here's your new CV!</h1>
+        <button onClick={handleEdit}>edit</button>
+      </div>
 
       <div className="completeCV-generalInfo">
-        <p>General Information</p>
+        <h2>General Information</h2>
 
         <img src={preview} alt="" />
 
@@ -47,12 +50,12 @@ export default function CompleteCV({generalInfo, educationInfo, practiceInfo, ha
       </div>
 
       <div className="completeCV-educationInfo">
-        <p>Education Info</p>
+        <h2>Education Info</h2>
       </div>
 
 
       <div className="completeCV-practiceInfo">
-        <p>Practice Info</p>
+        <h2>Practice Info</h2>
 
         {educationInfo.schoolName}
       {practiceInfo.companyName}

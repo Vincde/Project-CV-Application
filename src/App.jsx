@@ -49,8 +49,6 @@ function App() {
             </>
         ) : (
             <>
-                {educationInfo.length !== 0 ? educationInfo[0].schoolName : null}
-                {practiceInfo.length !== 0 ? practiceInfo[0].companyName : null}
                 <CompleteCV generalInfo={cvInfo}
                 educationInfo={educationInfo}
                 practiceInfo={practiceInfo}
