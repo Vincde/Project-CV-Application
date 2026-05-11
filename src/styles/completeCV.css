@@ -31,6 +31,13 @@
     border:4px solid #c7adad;
 }
 
+.completeCV-generalInfo h2,
+.completeCV-educationInfo h2,
+.completeCV-practiceInfo h2{
+    text-align: center;
+    margin:0; /* ... Needs to be reviewed the possibility of this */
+}
+
 
 
 .completeCV-generalInfo{
