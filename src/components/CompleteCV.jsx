@@ -57,9 +57,9 @@ export default function CompleteCV({generalInfo, educationInfo, practiceInfo, ha
             educationInfo.map((el) => {
               return(
                 <div key={el.id} className="educationInfo-singleBox">
-                  <p>School Name: {el.schoolName}</p>
-                  <p>Title Of Study: {el.titleOfStudy}</p>
-                  <p>Date of Study: {el.dateOfStudy}</p>
+                  <h3>{el.titleOfStudy}</h3>
+                  <p>School Name: {el.titleOfStudy}</p>
+                  <p>Graduation Date: {el.dateOfStudy}</p>
                 </div>
               )
             })
@@ -77,11 +77,11 @@ export default function CompleteCV({generalInfo, educationInfo, practiceInfo, ha
             practiceInfo.map((el) => {
               return(
                 <div key={el.id} className="practiceInfo-singleBox">
-                  <p>Company Name: {el.companyName}</p>
+                  <h3>{el.companyName}</h3>
                   <p>Position Title: {el.positionTitle}</p>
                   <p>Main Responsibilities: {el.mainResponsibilities}</p>
-                  <p>Started: {el.dateStart}</p>
-                  <p>Finished: {el.dateEnd}</p>
+                  <p>From: {el.dateStart}</p>
+                  <p>To: {el.dateEnd}</p>
                 </div>
               )
             })
